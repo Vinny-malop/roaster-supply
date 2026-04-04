@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roaster Supply Co. — Premium Coffee for Short-Term Rentals</title>
+  <meta name="description" content="Simple, high-quality coffee for Airbnb hosts and property managers. Improve guest experience, increase 5-star reviews, and restock with ease.">
+  <meta property="og:title" content="Roaster Supply Co. — Coffee for Short-Term Rentals">
+  <meta property="og:description" content="A simple upgrade that helps your guests feel taken care of — and leads to better reviews.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="wrap">
+      <div class="nav__inner">
+        <a href="index.html" class="logo logo--light">
+          <div class="logo__icon"><div class="logo__dot"></div></div>
+          <div class="logo__text">
+            <span class="logo__name">Roaster Supply Co.</span>
+            <span class="logo__sub">Brazilian Specialty Coffee</span>
+          </div>
+        </a>
+        <ul class="nav__links">
+          <li><a href="coffee-trucks.html">Coffee Trucks</a></li>
+          <li><a href="short-term-rentals.html" class="active">Short-Term Rentals</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="client-portal.html">Client Portal</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn--ghost nav__cta-desktop">Get Pricing</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="nav__mobile-overlay" id="mobileOverlay">
+    <button class="nav__mobile-close" id="mobileClose">&times;</button>
+    <a href="coffee-trucks.html" class="m-link">Coffee Trucks</a>
+    <a href="short-term-rentals.html" class="m-link">Short-Term Rentals</a>
+    <a href="contact.html" class="m-link">Contact</a>
+    <a href="client-portal.html" class="m-link">Client Portal</a>
+    <a href="contact.html" class="btn btn--ghost">Get Pricing</a>
+  </div>
+
+
+  <!-- ========================================
+       HERO
+  ======================================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__video-wrap">
+        <!-- ▼ SWAP with <video autoplay muted loop playsinline src="video.mp4"></video> -->
+        <div class="hero__placeholder"></div>
+      </div>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__body">
+      <span class="hero__kicker">Premium Brazilian · Built for Short-Term Rentals</span>
+      <h1 class="hero__title">Better guest experience starts with better coffee.</h1>
+      <p class="hero__sub">A simple upgrade that helps your guests feel taken care of — and leads to better reviews.</p>
+      <div class="hero__ctas">
+        <a href="contact.html" class="btn btn--primary">Get Pricing</a>
+        <a href="#products" class="btn btn--ghost-white">View Products</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       PRODUCTS
+  ======================================== -->
+  <section class="section section--cream" id="products">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">Products</span>
+        <h2>Two simple ways to upgrade your guest experience</h2>
+        <p>Designed for short stays, consistent quality, and easy restocking.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <div class="p-card anim">
+          <div class="p-card__img p-card__img--dark">
+            <div class="bag">
+              <div class="bag__shape bag__shape--dark">
+                <span class="bag__weight">1x</span>
+                <span class="bag__sub">Specialty Grade</span>
+                <span class="bag__brand">Roaster<br>Supply Co.</span>
+              </div>
+            </div>
+            <span class="p-badge">Guest Ready</span>
+          </div>
+          <div class="p-card__body">
+            <span class="p-card__tag">For Guest Units</span>
+            <h3 class="p-card__title">Guest Coffee (Single Bags)</h3>
+            <p class="p-card__desc">Individually packaged coffee for your guests — simple, clean, and ready to use.</p>
+            <ul class="p-card__list">
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Pre-measured for convenience</li>
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Clean, premium presentation</li>
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Easy to place in every unit</li>
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Designed for short stays</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="p-card anim">
+          <div class="p-card__img p-card__img--light">
+            <div class="bag">
+              <div class="bag__shape bag__shape--cream">
+                <span class="bag__weight">5lb</span>
+                <span class="bag__sub" style="color:rgba(17,17,17,0.42)">Bulk Supply</span>
+                <span class="bag__brand" style="color:rgba(17,17,17,0.65)">Roaster<br>Supply Co.</span>
+              </div>
+            </div>
+            <span class="p-badge">Bulk Supply</span>
+          </div>
+          <div class="p-card__body">
+            <span class="p-card__tag">For High-Volume Properties</span>
+            <h3 class="p-card__title">Bulk Supply (5lb Bags)</h3>
+            <p class="p-card__desc">Cost-effective coffee for properties that offer machines or shared kitchen setups.</p>
+            <ul class="p-card__list">
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Consistent quality</li>
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Easy to manage inventory</li>
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Ideal for high-volume properties</li>
+              <li class="p-card__item"><span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>Reliable and repeatable</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       WHY IT MATTERS
+  ======================================== -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">Why It Matters</span>
+        <h2>Small details create better reviews</h2>
+        <p>Guests remember the experience — not just the stay.</p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 class="why-card__title">Better First Impression</h3>
+          <p class="why-card__text">A small detail that makes your property feel more complete.</p>
+        </div>
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="why-card__title">More 5-Star Reviews</h3>
+          <p class="why-card__text">Guests notice thoughtful touches and mention them in reviews.</p>
+        </div>
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="why-card__title">Simple to Implement</h3>
+          <p class="why-card__text">No changes to your operation — just add coffee.</p>
+        </div>
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3 class="why-card__title">Cost-Effective Upgrade</h3>
+          <p class="why-card__text">Low cost per stay, high perceived value.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       HOW IT WORKS
+  ======================================== -->
+  <section class="section section--cream" id="how">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">How It Works</span>
+        <h2>How it works</h2>
+        <p>Simple to start. Easy to restock.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step anim">
+          <div class="step__num">1</div>
+          <h3 class="step__title">Tell us about your properties</h3>
+          <p class="step__text">Share how many units you manage and your estimated monthly volume.</p>
+        </div>
+        <div class="step anim">
+          <div class="step__num">2</div>
+          <h3 class="step__title">We recommend the best setup</h3>
+          <p class="step__text">We match you with the right product format and pricing tier for your operation.</p>
+        </div>
+        <div class="step anim">
+          <div class="step__num">3</div>
+          <h3 class="step__title">We deliver ready-to-use coffee</h3>
+          <p class="step__text">Your coffee arrives ready to place — with optional recurring delivery to keep you stocked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       PRICING
+  ======================================== -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple, scalable pricing</h2>
+        <p>Pricing improves as your volume grows.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="tier anim">
+          <span class="tier__label">Guest Units</span>
+          <h3 class="tier__name">Guest Coffee (Single Bags)</h3>
+          <p class="tier__vol">Individually packaged, ready to place in every unit — no prep required.</p>
+
+          <div style="margin-top:12px;border-top:1px solid rgba(17,17,17,0.06);">
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">1–9 units</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">10–24 units</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">25–49 units</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;">
+              <div style="font-weight:600">50+ units</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+          </div>
+
+          <ul class="tier__feats" style="margin-top:auto;padding-top:18px;margin-bottom:8px;">
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Pre-measured for convenience</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Clean, premium presentation</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Easy to place in every unit</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Recurring delivery available</li>
+          </ul>
+          <p style="color:#666;margin:6px 0 18px;font-size:14px;">Designed for consistent guest experience.</p>
+        </div>
+
+        <div class="tier anim">
+          <span class="tier__label">Bulk Supply</span>
+          <h3 class="tier__name">Bulk Supply (5lb Bags)</h3>
+          <p class="tier__vol">Cost-effective coffee for shared kitchens and high-volume properties.</p>
+
+          <div style="margin-top:12px;border-top:1px solid rgba(17,17,17,0.06);">
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">1–3 bags</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">4–9 bags</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">10–19 bags</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;">
+              <div style="font-weight:600">20+ bags</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+          </div>
+
+          <ul class="tier__feats" style="margin-top:auto;padding-top:18px;margin-bottom:8px;">
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Whole bean or ground to spec</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> One-way valve packaging</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Consistent roast, batch to batch</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Built for recurring orders</li>
+          </ul>
+          <p style="color:#666;margin:6px 0 18px;font-size:14px;">Ideal for properties managing multiple units.</p>
+        </div>
+      </div>
+
+      <div style="margin:40px auto 0;text-align:center;">
+        <a href="contact.html" class="btn btn--primary">Get Pricing</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       CONTACT
+  ======================================== -->
+  <section class="section section--dark" id="contact">
+    <div class="wrap">
+      <p style="text-align:center;color:rgba(255,255,255,0.55);font-size:15px;max-width:560px;margin:0 auto 48px;line-height:1.6;">Built for operators who want reliable coffee, simple ordering, and room to grow.</p>
+      <div class="contact-layout">
+
+        <div class="contact-left anim">
+          <div>
+            <span class="eyebrow">Get In Touch</span>
+            <h2 class="contact-headline">Let's upgrade your guest experience.</h2>
+          </div>
+          <p class="contact-desc">Tell us how many properties you manage and your estimated volume. We'll send pricing and recommendations.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              hello@roastersupplyco.com
+            </div>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+              (888) 762-7837
+            </div>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 00-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 00-8-8z"/></svg>
+              Serving property managers nationwide
+            </div>
+          </div>
+        </div>
+
+        <div class="form-box anim">
+          <form id="contactForm" novalidate>
+            <div class="form-stack">
+              <div class="form-row">
+                <div class="f-field">
+                  <label for="f-name">Your Name</label>
+                  <input type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+                </div>
+                <div class="f-field">
+                  <label for="f-biz">Business / Property Name</label>
+                  <input type="text" id="f-biz" name="business" placeholder="Lakeside Stays" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="f-field">
+                  <label for="f-email">Email Address</label>
+                  <input type="email" id="f-email" name="email" placeholder="jane@yourrental.com" required>
+                </div>
+                <div class="f-field">
+                  <label for="f-vol">Number of Properties</label>
+                  <select id="f-vol" name="volume" required>
+                    <option value="" disabled selected>Select range</option>
+                    <option value="1-4">1–4 properties</option>
+                    <option value="5-14">5–14 properties</option>
+                    <option value="15-29">15–29 properties</option>
+                    <option value="30-plus">30+ properties</option>
+                    <option value="not-sure">Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="f-field">
+                <label for="f-msg">Tell Us About Your Properties</label>
+                <textarea id="f-msg" name="message" placeholder="Where do you operate? Monthly volume? Interested in single bags or bulk supply?"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn btn--primary btn--full" style="padding:15px 30px;font-size:14.5px" id="submitBtn">
+                  Get Pricing
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3>Request received.</h3>
+            <p>We'll respond within one business day.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="index.html" class="logo">
+            <div class="logo__icon"><div class="logo__dot"></div></div>
+            <div class="logo__text">
+              <span class="logo__name">Roaster Supply Co.</span>
+              <span class="logo__sub">Brazilian Specialty Coffee</span>
+            </div>
+          </a>
+          <p class="footer__tagline">Premium Brazilian coffee for operators who take quality seriously.</p>
+        </div>
+        <div class="footer__cols">
+          <div class="footer__col">
+            <span class="footer__col-label">Solutions</span>
+            <a href="coffee-trucks.html">Coffee Trucks</a>
+            <a href="short-term-rentals.html">Short-Term Rentals</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-label">Company</span>
+            <a href="contact.html">Contact</a>
+            <a href="client-portal.html">Client Portal</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-label">Legal</span>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Roaster Supply Co. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms-of-service.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
