@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roaster Supply Co. — Brazilian Specialty Coffee for Coffee Trucks</title>
+  <meta name="description" content="Premium Brazilian specialty coffee for coffee trucks across the USA. Direct-sourced, specialty-grade, with private label available.">
+  <meta property="og:title" content="Roaster Supply Co. — Brazilian Specialty Coffee">
+  <meta property="og:description" content="Premium Brazilian specialty coffee built for coffee trucks. Consistent, direct-sourced, and ready to build your brand.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================
+       CUSTOM PROPERTIES
+    ========================================== */
+    :root {
+      --white:        #FFFFFF;
+      --black:        #111111;
+      --accent:       #C97B2A;
+      --cream:        #F5F0E8;
+      --accent-faint: rgba(201,123,42,0.12);
+      --shadow-sm:    0 1px 4px rgba(17,17,17,0.08);
+      --shadow-md:    0 4px 20px rgba(17,17,17,0.10);
+      --shadow-lg:    0 12px 40px rgba(17,17,17,0.13);
+      --font-head:    'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --radius:       4px;
+      --radius-lg:    10px;
+      --ease:         0.25s ease;
+      --max-w:        1200px;
+      --pad-x:        clamp(20px, 5vw, 60px);
+      --section-y:    clamp(72px, 9vw, 128px);
+    }
+
+    /* ==========================================
+       RESET
+    ========================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--black);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img, video { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
+    input, select, textarea { font-family: inherit; }
+
+    /* ==========================================
+       TYPOGRAPHY
+    ========================================== */
+    h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.12; font-weight: 600; }
+    h1 { font-size: clamp(38px, 6vw, 78px); }
+    h2 { font-size: clamp(28px, 4vw, 50px); }
+    h3 { font-size: clamp(19px, 2.2vw, 26px); }
+
+    .eyebrow {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    /* ==========================================
+       LAYOUT
+    ========================================== */
+    .wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--pad-x);
+    }
+    .section { padding: var(--section-y) 0; }
+    .section--cream { background: var(--cream); }
+    .section--dark  { background: var(--black); color: var(--white); }
+
+    /* ==========================================
+       BUTTONS
+    ========================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 30px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .4px;
+      border-radius: var(--radius);
+      transition: all var(--ease);
+      white-space: nowrap;
+      line-height: 1;
+    }
+    .btn--primary {
+      background: var(--black);
+      color: var(--white);
+      border: 1.5px solid var(--black);
+    }
+    .btn--primary:hover {
+      background: #222;
+      border-color: #222;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(17,17,17,0.28);
+    }
+    .btn--ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+    .btn--ghost:hover {
+      background: var(--accent);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+    .btn--ghost-white {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.45);
+    }
+    .btn--ghost-white:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.09);
+    }
+    .btn--accent {
+      background: var(--accent);
+      color: var(--white);
+      border: 1.5px solid var(--accent);
+    }
+    .btn--accent:hover {
+      background: #b5691e;
+      border-color: #b5691e;
+      transform: translateY(-1px);
+    }
+    .btn--full { width: 100%; }
+
+    /* ==========================================
+       LOGO
+    ========================================== */
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .logo__icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all var(--ease);
+    }
+    .logo__dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .logo__text { display: flex; flex-direction: column; gap: 2px; }
+    .logo__name {
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1;
+      transition: color var(--ease);
+    }
+    .logo__sub {
+      font-size: 7.5px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    /* Dark background variant */
+    .logo--light .logo__name { color: var(--white); }
+    .logo--light .logo__icon { border-color: rgba(201,123,42,0.6); }
+
+    /* ==========================================
+       NAVIGATION
+    ========================================== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      padding: 22px 0;
+      transition: background .35s ease, padding .35s ease, box-shadow .35s ease;
+    }
+    .nav.scrolled {
+      background: rgba(17,17,17,0.96);
+      padding: 14px 0;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav__links {
+      display: none;
+      align-items: center;
+      gap: 34px;
+    }
+    .nav__links a {
+      font-size: 13.5px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: .2px;
+      transition: color var(--ease);
+    }
+    .nav__links a:hover { color: var(--white); }
+    .nav__cta-desktop { display: none; }
+
+    .nav__burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 8px;
+    }
+    .nav__burger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: all var(--ease);
+    }
+
+    /* Mobile overlay */
+    .nav__mobile-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 199;
+      background: var(--black);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+    .nav__mobile-overlay.open { display: flex; }
+    .nav__mobile-close {
+      position: absolute;
+      top: 22px; right: var(--pad-x);
+      font-size: 30px;
+      color: rgba(255,255,255,0.7);
+      transition: color var(--ease);
+    }
+    .nav__mobile-close:hover { color: var(--white); }
+    .nav__mobile-overlay a {
+      font-family: var(--font-head);
+      font-size: 30px;
+      color: var(--white);
+      transition: color var(--ease);
+    }
+    .nav__mobile-overlay a:hover { color: var(--accent); }
+
+    @media (min-width: 768px) {
+      .nav__links { display: flex; }
+      .nav__cta-desktop { display: inline-flex; }
+      .nav__burger { display: none; }
+    }
+
+    /* ==========================================
+       HERO
+    ========================================== */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Background layer */
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero__video-wrap {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    /* Placeholder — swap this div for a <video> or <iframe> */
+    .hero__placeholder {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(160deg, #1c1008 0%, #0c0804 55%, #1a100a 100%);
+      position: relative;
+    }
+    /* Subtle warm radial glow */
+    .hero__placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 28% 65%, rgba(201,123,42,0.14) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 45% at 72% 30%, rgba(17,17,17,0.5) 0%, transparent 65%);
+    }
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17,17,17,0.70);
+      z-index: 1;
+    }
+
+    /* Content */
+    .hero__body {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 130px var(--pad-x) 100px;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero__kicker {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px;
+    }
+    .hero__kicker::before,
+    .hero__kicker::after {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+      opacity: 0.55;
+    }
+    .hero__title {
+      color: var(--white);
+      font-size: clamp(40px, 6.5vw, 82px);
+      line-height: 1.08;
+      max-width: 860px;
+      margin-bottom: 26px;
+      font-weight: 700;
+    }
+    .hero__title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero__sub {
+      font-size: clamp(15px, 1.8vw, 19px);
+      color: rgba(255,255,255,0.68);
+      max-width: 500px;
+      margin-bottom: 44px;
+      font-weight: 300;
+      line-height: 1.72;
+    }
+    .hero__ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      align-items: center;
+    }
+    @media (min-width: 460px) {
+      .hero__ctas { flex-direction: row; justify-content: center; }
+    }
+
+    /* Play button */
+    .hero__play {
+      position: absolute;
+      bottom: 44px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.6);
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      transition: color var(--ease);
+    }
+    .hero__play:hover { color: var(--white); }
+    .hero__play-ring {
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--ease);
+      backdrop-filter: blur(4px);
+    }
+    .hero__play:hover .hero__play-ring {
+      border-color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.07);
+      transform: scale(1.06);
+    }
+    /* Triangle icon */
+    .hero__play-ring::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 16px solid rgba(255,255,255,0.85);
+      margin-left: 4px;
+    }
+
+    /* ==========================================
+       VIDEO MODAL
+    ========================================== */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(17,17,17,0.93);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .modal.open { display: flex; }
+    .modal__wrap {
+      position: relative;
+      width: 100%;
+      max-width: 920px;
+      aspect-ratio: 16/9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: #080503;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+    }
+    /* Swap .modal__placeholder for your <iframe> embed */
+    .modal__placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: rgba(255,255,255,0.35);
+    }
+    .modal__placeholder-ring {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(201,123,42,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal__placeholder-ring::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 14px solid rgba(201,123,42,0.6);
+      margin-left: 3px;
+    }
+    .modal__placeholder p { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .modal__placeholder small { font-size: 12px; opacity: 0.45; }
+    .modal__close {
+      position: absolute;
+      top: -46px;
+      right: 0;
+      font-size: 34px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1;
+      transition: color var(--ease);
+    }
+    .modal__close:hover { color: var(--white); }
+
+    /* ==========================================
+       SECTION HEADER
+    ========================================== */
+    .sec-head { max-width: 600px; }
+    .sec-head--center { margin: 0 auto; text-align: center; }
+    .sec-head p {
+      margin-top: 18px;
+      font-size: clamp(15px, 1.7vw, 17.5px);
+      color: #5a5a5a;
+      line-height: 1.72;
+      font-weight: 300;
+    }
+    .section--dark .sec-head p { color: rgba(255,255,255,0.55); }
+
+    /* ==========================================
+       PRODUCTS
+    ========================================== */
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 60px;
+    }
+    @media (min-width: 620px) {
+      .products-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .p-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(17,17,17,0.09);
+      box-shadow: var(--shadow-md);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .section--cream .p-card { box-shadow: var(--shadow-lg); }
+    .p-card:hover { transform: translateY(-5px); box-shadow: 0 16px 48px rgba(17,17,17,0.14); }
+
+    /* Card image area */
+    .p-card__img {
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .p-card__img--dark  { background: linear-gradient(150deg, #1c1008 0%, #0d0904 100%); }
+    .p-card__img--light { background: linear-gradient(150deg, #f8f3ea 0%, #e9ddc8 100%); }
+
+    /* Bag illustration */
+    .bag {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .bag__shape {
+      width: 98px;
+      height: 128px;
+      border-radius: 7px 7px 11px 11px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.28);
+      position: relative;
+      overflow: hidden;
+    }
+    .bag__shape::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 30%;
+      background: rgba(255,255,255,0.04);
+    }
+    .bag__shape--dark {
+      background: linear-gradient(170deg, #2c2c2c 0%, #181818 100%);
+      border: 1px solid rgba(201,123,42,0.25);
+    }
+    .bag__shape--cream {
+      background: linear-gradient(170deg, #f8f4ec 0%, #ece3d2 100%);
+      border: 1px solid rgba(201,123,42,0.35);
+    }
+    .bag__weight {
+      font-family: var(--font-head);
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .bag__brand {
+      font-family: var(--font-head);
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 0 10px;
+      line-height: 1.4;
+    }
+    .bag__shape--dark  .bag__brand { color: rgba(255,255,255,0.7); }
+    .bag__shape--cream .bag__brand { color: rgba(17,17,17,0.7); }
+    .bag__sub {
+      font-size: 7.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .bag__shape--dark  .bag__sub { color: rgba(255,255,255,0.4); }
+    .bag__shape--cream .bag__sub { color: rgba(17,17,17,0.45); }
+
+    .p-badge {
+      position: absolute;
+      top: 15px; right: 15px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+    }
+
+    /* Card body */
+    .p-card__body { padding: 28px 28px 32px; }
+    .p-card__tag {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 9px;
+    }
+    .p-card__title {
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .p-card__desc {
+      font-size: 14.5px;
+      color: #575757;
+      line-height: 1.68;
+      margin-bottom: 22px;
+    }
+    .p-card__list { display: flex; flex-direction: column; gap: 9px; }
+    .p-card__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #444;
+    }
+    .check-icon {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--accent-faint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .check-icon svg { width: 10px; height: 10px; stroke: var(--accent); fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ==========================================
+       WHY SECTION
+    ========================================== */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      margin-top: 60px;
+    }
+    @media (min-width: 600px)  { .why-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px)  { .why-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .why-card__icon {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius-lg);
+      background: var(--accent-faint);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .why-card__icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--accent);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .why-card__title {
+      font-family: var(--font-head);
+      font-size: 19.5px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .why-card__text {
+      font-size: 14.5px;
+      color: #585858;
+      line-height: 1.68;
+    }
+
+    /* ==========================================
+       HOW IT WORKS
+    ========================================== */
+    .steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 52px;
+      margin-top: 68px;
+      position: relative;
+    }
+    @media (min-width: 760px) {
+      .steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+      }
+      /* Connecting line */
+      .steps::before {
+        content: '';
+        position: absolute;
+        top: 27px;
+        left: calc(16.6% + 28px);
+        right: calc(16.6% + 28px);
+        height: 1px;
+        background: linear-gradient(to right, var(--accent), rgba(201,123,42,0.18), var(--accent));
+        z-index: 0;
+      }
+    }
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      z-index: 1;
+      padding: 0 28px;
+    }
+    @media (min-width: 760px) {
+      .step { align-items: center; text-align: center; }
+    }
+    .step__num {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent);
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 24px;
+      flex-shrink: 0;
+    }
+    .step__title {
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .step__text {
+      font-size: 14.5px;
+      color: #575757;
+      line-height: 1.7;
+    }
+
+    /* ==========================================
+       PRICING
+    ========================================== */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-top: 60px;
+    }
+    @media (min-width: 768px) {
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: start; }
+    }
+
+    .tier {
+      border-radius: var(--radius-lg);
+      border: 1.5px solid rgba(17,17,17,0.1);
+      padding: 36px 28px;
+      background: var(--white);
+      position: relative;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .tier:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .tier--star {
+      background: var(--black);
+      border-color: var(--accent);
+      color: var(--white);
+    }
+    .tier--star::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: var(--white);
+      font-size: 8.5px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 13px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .tier__label {
+      display: block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .tier__name {
+      font-family: var(--font-head);
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+    .tier__vol {
+      font-size: 13px;
+      color: #888;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgba(17,17,17,0.08);
+    }
+    .tier--star .tier__vol { color: rgba(255,255,255,0.45); border-bottom-color: rgba(255,255,255,0.1); }
+    .tier__price {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-bottom: 28px;
+    }
+    .tier__from { font-size: 13px; color: #888; }
+    .tier--star .tier__from { color: rgba(255,255,255,0.45); }
+    .tier__amount {
+      font-family: var(--font-head);
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .tier--star .tier__amount { color: var(--white); }
+    .tier__per { font-size: 13px; color: #888; }
+    .tier--star .tier__per { color: rgba(255,255,255,0.45); }
+
+    .tier__feats { display: flex; flex-direction: column; gap: 11px; margin-bottom: 32px; }
+    .tier__feat { display: flex; align-items: center; gap: 9px; font-size: 13.5px; color: #444; }
+    .tier--star .tier__feat { color: rgba(255,255,255,0.82); }
+    .tier__feat svg { width: 15px; height: 15px; flex-shrink: 0; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ==========================================
+       CONTACT
+    ========================================== */
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 56px;
+      margin-top: 60px;
+    }
+    @media (min-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr 1.65fr; align-items: start; }
+    }
+
+    .contact-left { display: flex; flex-direction: column; gap: 32px; }
+    .contact-headline {
+      font-family: var(--font-head);
+      font-size: clamp(28px, 3.8vw, 44px);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--white);
+    }
+    .contact-headline em { font-style: italic; color: var(--accent); }
+    .contact-desc { font-size: 15px; color: rgba(255,255,255,0.58); line-height: 1.72; }
+
+    .contact-details { display: flex; flex-direction: column; gap: 15px; }
+    .contact-detail { display: flex; align-items: center; gap: 13px; font-size: 14.5px; color: rgba(255,255,255,0.65); }
+    .contact-detail svg { width: 17px; height: 17px; stroke: var(--accent); fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    /* Form */
+    .form-box {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: clamp(26px, 4vw, 48px);
+    }
+    .form-stack { display: flex; flex-direction: column; gap: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    @media (min-width: 460px) { .form-row { grid-template-columns: 1fr 1fr; } }
+
+    .f-field { display: flex; flex-direction: column; gap: 7px; }
+    .f-field label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+    .f-field input,
+    .f-field select,
+    .f-field textarea {
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: var(--radius);
+      padding: 12px 15px;
+      font-size: 14.5px;
+      color: var(--white);
+      outline: none;
+      transition: border-color var(--ease), background var(--ease);
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .f-field input::placeholder,
+    .f-field textarea::placeholder { color: rgba(255,255,255,0.22); }
+    .f-field input:focus,
+    .f-field select:focus,
+    .f-field textarea:focus {
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.075);
+    }
+    .f-field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7' viewBox='0 0 10 7'%3E%3Cpath d='M1 1l4 4 4-4' stroke='rgba(255,255,255,0.38)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-color: rgba(255,255,255,0.055);
+      padding-right: 36px;
+      cursor: pointer;
+    }
+    .f-field select option { background: #1a1a1a; color: var(--white); }
+    .f-field textarea { resize: vertical; min-height: 116px; }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .form-success.show { display: block; }
+    .form-success__icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(201,123,42,0.13);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .form-success__icon svg { width: 24px; height: 24px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .form-success h3 { color: var(--white); font-size: 22px; margin-bottom: 10px; }
+    .form-success p { color: rgba(255,255,255,0.55); font-size: 15px; line-height: 1.65; }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+    .footer {
+      background: var(--cream);
+      padding: 44px 0;
+      border-top: 1px solid rgba(17,17,17,0.08);
+    }
+    .footer__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      text-align: center;
+    }
+    @media (min-width: 600px) {
+      .footer__inner { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    .footer__links { display: flex; gap: 26px; }
+    .footer__links a { font-size: 13px; color: #999; transition: color var(--ease); }
+    .footer__links a:hover { color: var(--black); }
+    .footer__copy { font-size: 12.5px; color: #aaa; }
+
+    /* ==========================================
+       SCROLL ANIMATIONS
+    ========================================== */
+    .anim {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .anim.in {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================
+       NAV
+  ======================================== -->
+  <nav class="nav" id="nav">
+    <div class="wrap">
+      <div class="nav__inner">
+        <a href="#home" class="logo logo--light">
+          <div class="logo__icon"><div class="logo__dot"></div></div>
+          <div class="logo__text">
+            <span class="logo__name">Roaster Supply Co.</span>
+            <span class="logo__sub">Brazilian Specialty Coffee</span>
+          </div>
+        </a>
+        <ul class="nav__links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why">Our Coffee</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--ghost nav__cta-desktop">Get Pricing</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile-overlay" id="mobileOverlay">
+    <button class="nav__mobile-close" id="mobileClose">&times;</button>
+    <a href="#products" class="m-link">Products</a>
+    <a href="#why" class="m-link">Our Coffee</a>
+    <a href="#how" class="m-link">How It Works</a>
+    <a href="#pricing" class="m-link">Pricing</a>
+    <a href="#contact" class="btn btn--ghost">Get Pricing</a>
+  </div>
+
+
+  <!-- ========================================
+       HERO
+  ======================================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="hero__video-wrap">
+        <!-- ▼ SWAP THIS DIV with <video autoplay muted loop playsinline src="video.mp4"></video> -->
+        <div class="hero__placeholder"></div>
+      </div>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__body">
+      <span class="hero__kicker">Premium Brazilian · Built for Trucks</span>
+      <h1 class="hero__title">Brazilian Coffee Built for Coffee Trucks.</h1>
+      <p class="hero__sub">Consistent quality, stronger margins, and private label options — for operators who want a better cup and more revenue.</p>
+      <div class="hero__ctas">
+        <a href="#contact" class="btn btn--primary">Get Pricing</a>
+        <a href="#products" class="btn btn--ghost-white">View Products</a>
+      </div>
+    </div>
+
+    <button class="hero__play" id="playBtn" aria-label="Watch our story">
+      <div class="hero__play-ring"></div>
+      <span>Our Story</span>
+    </button>
+  </section>
+
+
+  <!-- Video Modal -->
+  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Brand video">
+    <div class="modal__wrap">
+      <button class="modal__close" id="modalClose" aria-label="Close video">&times;</button>
+      <!-- ▼ SWAP .modal__placeholder with your iframe embed, e.g.:
+           <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" ... allow="autoplay" allowfullscreen></iframe>
+      -->
+      <div class="modal__placeholder">
+        <div class="modal__placeholder-ring"></div>
+        <p>Video embed placeholder</p>
+        <small>Replace with your YouTube or Vimeo iframe</small>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================
+       PRODUCTS
+  ======================================== -->
+  <section class="section section--cream" id="products">
+    <div class="wrap">
+      <div class="sec-head anim">
+        <span class="eyebrow">Our Products</span>
+        <h2>Two ways to grow your truck.</h2>
+        <p>One for daily service. One for retail revenue.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- 5lb Operational -->
+        <div class="p-card anim">
+          <div class="p-card__img p-card__img--dark">
+            <div class="bag">
+              <div class="bag__shape bag__shape--dark">
+                <span class="bag__weight">5lb</span>
+                <span class="bag__sub">Specialty Grade</span>
+                <span class="bag__brand">Roaster<br>Supply Co.</span>
+              </div>
+            </div>
+            <span class="p-badge">Operational</span>
+          </div>
+          <div class="p-card__body">
+            <span class="p-card__tag">For Daily Operations</span>
+            <h3 class="p-card__title">5lb Specialty Bags</h3>
+            <p class="p-card__desc">Consistent Brazilian coffee for high-volume service — roasted for reliability, easy to dial in, and priced for operators.</p>
+            <ul class="p-card__list">
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Whole bean or ground to spec
+              </li>
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                One-way valve packaging
+              </li>
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Consistent roast, batch to batch
+              </li>
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Built for recurring orders
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 12oz Private Label -->
+        <div class="p-card anim">
+          <div class="p-card__img p-card__img--light">
+            <div class="bag">
+              <div class="bag__shape bag__shape--cream">
+                <span class="bag__weight">12oz</span>
+                <span class="bag__sub" style="color:rgba(17,17,17,0.42)">Your Brand</span>
+                <span class="bag__brand" style="color:rgba(17,17,17,0.65)">YOUR TRUCK<br>NAME HERE</span>
+              </div>
+            </div>
+            <span class="p-badge">Private Label</span>
+          </div>
+          <div class="p-card__body">
+            <span class="p-card__tag">For Retail Sales</span>
+            <h3 class="p-card__title">12oz Private Label Bags</h3>
+            <p class="p-card__desc">Turn your best cup into a take-home product with your truck’s logo — add revenue and build loyalty.</p>
+            <ul class="p-card__list">
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Your logo and label included
+              </li>
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Retail-ready packaging
+              </li>
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Built for resale margins
+              </li>
+              <li class="p-card__item">
+                <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2 6 5 9.5 10 2.5"/></svg></span>
+                Volume pricing available
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       WHY BRAZILIAN COFFEE
+  ======================================== -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">Why Brazilian Coffee</span>
+        <h2>Why Brazilian coffee works for coffee trucks</h2>
+        <p>Reliable, approachable, and built for consistency in high-volume service.</p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
+              <path d="M8 12l3 3 5-5"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">Specialty Grade Only</h3>
+          <p class="why-card__text">Clean, dependable coffee from trusted Brazilian producers.</p>
+        </div>
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">Consistent in the Cup</h3>
+          <p class="why-card__text">Roasted for repeatability, so your coffee tastes right week after week.</p>
+        </div>
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">Direct from Origin</h3>
+          <p class="why-card__text">Sourced with close relationships and fewer middle layers.</p>
+        </div>
+
+        <div class="why-card anim">
+          <div class="why-card__icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="why-card__title">Built for Operators</h3>
+          <p class="why-card__text">Pricing, packaging, and support designed for business use.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       HOW IT WORKS
+  ======================================== -->
+  <section class="section section--cream" id="how">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">How It Works</span>
+        <h2>How it works</h2>
+        <p>Simple to start. Easy to scale.</p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step anim">
+          <div class="step__num">1</div>
+          <h3 class="step__title">Tell us what you need</h3>
+          <p class="step__text">Share your monthly volume, roast preference, and whether you want private label.</p>
+        </div>
+
+        <div class="step anim">
+          <div class="step__num">2</div>
+          <h3 class="step__title">We build your plan</h3>
+          <p class="step__text">We recommend the right products, pricing tier, and shipping setup for your truck.</p>
+        </div>
+
+        <div class="step anim">
+          <div class="step__num">3</div>
+          <h3 class="step__title">Receive and serve</h3>
+          <p class="step__text">Your coffee arrives ready to use — with optional recurring delivery.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       PRICING
+  ======================================== -->
+  <section class="section" id="pricing">
+    <div class="wrap">
+      <div class="sec-head sec-head--center anim">
+        <span class="eyebrow">Pricing</span>
+        <h2>Simple wholesale pricing</h2>
+        <p>Volume-based pricing for 5lb bags. Better rates as you scale.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="tier anim" style="max-width:760px;margin:0 auto;text-align:left;">
+          <span class="tier__label">5lb Bags — Wholesale</span>
+          <h3 class="tier__name">Volume pricing</h3>
+
+          <div style="margin-top:20px;border-top:1px solid rgba(17,17,17,0.06);">
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">4–9 bags</div>
+              <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$73 <span style="font-size:13px;color:#888">/ bag</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">10–19 bags</div>
+              <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$65 <span style="font-size:13px;color:#888">/ bag</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">20+ bags</div>
+              <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$60 <span style="font-size:13px;color:#888">/ bag</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;">
+              <div style="font-weight:600">40+ bags</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us for pricing</div>
+            </div>
+          </div>
+
+          <p style="color:#666;margin:20px 0 18px;">Most partners order 10–20 bags per month.</p>
+          <a href="#contact" class="btn btn--primary btn--full">Get Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       CONTACT
+  ======================================== -->
+  <section class="section section--dark" id="contact">
+    <div class="wrap">
+      <div class="contact-layout">
+
+        <!-- Left col -->
+        <div class="contact-left anim">
+          <div>
+            <span class="eyebrow">Get In Touch</span>
+            <h2 class="contact-headline">Let’s build your coffee program.</h2>
+          </div>
+          <p class="contact-desc">Tell us about your truck and monthly volume. We'll send pricing and recommended options.</p>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              hello@roastersupplyco.com
+            </div>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.06 6.06l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+              </svg>
+              (888) 762-7837
+            </div>
+            <div class="contact-detail">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 2a8 8 0 00-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 00-8-8z"/>
+              </svg>
+              Serving coffee trucks nationwide
+            </div>
+          </div>
+        </div>
+
+        <!-- Right col — form -->
+        <div class="form-box anim">
+          <form id="contactForm" novalidate>
+            <div class="form-stack">
+              <div class="form-row">
+                <div class="f-field">
+                  <label for="f-name">Your Name</label>
+                  <input type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+                </div>
+                <div class="f-field">
+                  <label for="f-biz">Business Name</label>
+                  <input type="text" id="f-biz" name="business" placeholder="The Daily Brew Co." required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="f-field">
+                  <label for="f-email">Email Address</label>
+                  <input type="email" id="f-email" name="email" placeholder="jane@yourtruck.com" required>
+                </div>
+                <div class="f-field">
+                  <label for="f-vol">Monthly Volume</label>
+                  <select id="f-vol" name="volume" required>
+                    <option value="" disabled selected>Select volume</option>
+                    <option value="under-20">Under 20 lbs / month</option>
+                    <option value="20-40">20–40 lbs / month</option>
+                    <option value="40-80">40–80 lbs / month</option>
+                    <option value="80-120">80–120 lbs / month</option>
+                    <option value="120-plus">120+ lbs / month</option>
+                    <option value="not-sure">Not sure yet</option>
+                  </select>
+                </div>
+              </div>
+              <div class="f-field">
+                  <label for="f-msg">Tell Us About Your Truck</label>
+                  <textarea id="f-msg" name="message" placeholder="Where do you operate? What do you serve? Interested in private label?"></textarea>
+              </div>
+              <div>
+                <button type="submit" class="btn btn--primary btn--full" style="padding:15px 30px;font-size:14.5px" id="submitBtn">
+                  Get Pricing
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>Request received.</h3>
+            <p>We'll respond within one business day.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       FOOTER
+  ======================================== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__inner">
+        <a href="#home" class="logo">
+          <div class="logo__icon"><div class="logo__dot"></div></div>
+          <div class="logo__text">
+            <span class="logo__name">Roaster Supply Co.</span>
+            <span class="logo__sub">Brazilian Specialty Coffee</span>
+          </div>
+        </a>
+        <ul class="footer__links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p class="footer__copy">&copy; 2026 Roaster Supply Co. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ========================================
+       JAVASCRIPT
+  ======================================== -->
+  <script>
+    // --- Nav scroll state ---
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 48);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // --- Mobile menu ---
+    const overlay  = document.getElementById('mobileOverlay');
+    const burger   = document.getElementById('burger');
+    const mClose   = document.getElementById('mobileClose');
+    const mLinks   = overlay.querySelectorAll('.m-link, .btn');
+
+    const openMenu  = () => { overlay.classList.add('open');  document.body.style.overflow = 'hidden'; };
+    const closeMenu = () => { overlay.classList.remove('open'); document.body.style.overflow = ''; };
+
+    burger.addEventListener('click', openMenu);
+    mClose.addEventListener('click', closeMenu);
+    mLinks.forEach(l => l.addEventListener('click', closeMenu));
+
+    // --- Video modal ---
+    const playBtn    = document.getElementById('playBtn');
+    const videoModal = document.getElementById('videoModal');
+    const modalClose = document.getElementById('modalClose');
+
+    const openModal  = () => { videoModal.classList.add('open');  document.body.style.overflow = 'hidden'; };
+    const closeModal = () => { videoModal.classList.remove('open'); document.body.style.overflow = ''; };
+
+    playBtn.addEventListener('click', openModal);
+    modalClose.addEventListener('click', closeModal);
+    videoModal.addEventListener('click', e => { if (e.target === videoModal) closeModal(); });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { closeModal(); closeMenu(); }
+    });
+
+    // --- Scroll animations ---
+    const animEls = document.querySelectorAll('.anim');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // stagger siblings in the same parent grid
+          const siblings = [...entry.target.parentElement.querySelectorAll('.anim:not(.in)')];
+          const idx = siblings.indexOf(entry.target);
+          entry.target.style.transitionDelay = (idx * 0.08) + 's';
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    animEls.forEach(el => io.observe(el));
+
+    // --- Contact form (demo handler) ---
+    // Replace the setTimeout with a real POST to Formspree, Netlify Forms, etc.
+    const form    = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      // ▼ Replace with: fetch('/api/contact', { method:'POST', body: new FormData(form) })
+      setTimeout(() => {
+        form.style.display = 'none';
+        success.classList.add('show');
+      }, 900);
+    });
+  </script>
+
+</body>
+</html>
