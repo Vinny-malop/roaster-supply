@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+2<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -782,7 +782,7 @@
       margin-top: 60px;
     }
     @media (min-width: 768px) {
-      .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
     }
 
     .tier {
@@ -792,6 +792,8 @@
       background: var(--white);
       position: relative;
       transition: transform .3s ease, box-shadow .3s ease;
+      display: flex;
+      flex-direction: column;
     }
     .tier:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .tier--star {
@@ -1017,7 +1019,7 @@
         </a>
         <ul class="nav__links">
           <li><a href="#products">Products</a></li>
-          <li><a href="#why">Our Coffee</a></li>
+          <li><a href="#why">Why Brazilian Coffee</a></li>
           <li><a href="#how">How It Works</a></li>
           <li><a href="#pricing">Pricing</a></li>
         </ul>
@@ -1033,7 +1035,7 @@
   <div class="nav__mobile-overlay" id="mobileOverlay">
     <button class="nav__mobile-close" id="mobileClose">&times;</button>
     <a href="#products" class="m-link">Products</a>
-    <a href="#why" class="m-link">Our Coffee</a>
+    <a href="#why" class="m-link">Why Brazilian Coffee</a>
     <a href="#how" class="m-link">How It Works</a>
     <a href="#pricing" class="m-link">Pricing</a>
     <a href="#contact" class="btn btn--ghost">Get Pricing</a>
@@ -1055,34 +1057,18 @@
     <div class="hero__body">
       <span class="hero__kicker">Premium Brazilian · Built for Trucks</span>
       <h1 class="hero__title">Brazilian Coffee Built for Coffee Trucks.</h1>
-      <p class="hero__sub">Consistent quality, stronger margins, and private label options — for operators who want a better cup and more revenue.</p>
+      <p class="hero__sub">Consistent quality, competitive wholesale pricing, and private label options — built for operators who want to serve better coffee and grow revenue.</p>
       <div class="hero__ctas">
         <a href="#contact" class="btn btn--primary">Get Pricing</a>
         <a href="#products" class="btn btn--ghost-white">View Products</a>
       </div>
     </div>
 
-    <button class="hero__play" id="playBtn" aria-label="Watch our story">
-      <div class="hero__play-ring"></div>
-      <span>Our Story</span>
-    </button>
+    
   </section>
 
 
-  <!-- Video Modal -->
-  <div class="modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Brand video">
-    <div class="modal__wrap">
-      <button class="modal__close" id="modalClose" aria-label="Close video">&times;</button>
-      <!-- ▼ SWAP .modal__placeholder with your iframe embed, e.g.:
-           <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1" ... allow="autoplay" allowfullscreen></iframe>
-      -->
-      <div class="modal__placeholder">
-        <div class="modal__placeholder-ring"></div>
-        <p>Video embed placeholder</p>
-        <small>Replace with your YouTube or Vimeo iframe</small>
-      </div>
-    </div>
-  </div>
+  
 
 
   <!-- ========================================
@@ -1282,15 +1268,16 @@
       <div class="sec-head sec-head--center anim">
         <span class="eyebrow">Pricing</span>
         <h2>Simple wholesale pricing</h2>
-        <p>Volume-based pricing for 5lb bags. Better rates as you scale.</p>
+        <p>Volume-based wholesale pricing for 5lb bags. Better pricing as you scale.</p>
       </div>
 
       <div class="pricing-grid">
-        <div class="tier anim" style="max-width:760px;margin:0 auto;text-align:left;">
+        <div class="tier anim">
           <span class="tier__label">5lb Bags — Wholesale</span>
-          <h3 class="tier__name">Volume pricing</h3>
+          <h3 class="tier__name">5lb Wholesale Bags</h3>
+          <p class="tier__vol" style="margin-bottom:8px;">Built for daily operations — consistent, easy to dial in, and priced for high-volume service.</p>
 
-          <div style="margin-top:20px;border-top:1px solid rgba(17,17,17,0.06);">
+          <div style="margin-top:12px;border-top:1px solid rgba(17,17,17,0.06);">
             <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
               <div style="font-weight:600">4–9 bags</div>
               <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$73 <span style="font-size:13px;color:#888">/ bag</span></div>
@@ -1305,13 +1292,55 @@
             </div>
             <div style="display:flex;justify-content:space-between;padding:14px 0;">
               <div style="font-weight:600">40+ bags</div>
-              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us for pricing</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
             </div>
           </div>
 
-          <p style="color:#666;margin:20px 0 18px;">Most partners order 10–20 bags per month.</p>
-          <a href="#contact" class="btn btn--primary btn--full">Get Pricing</a>
+          <ul class="tier__feats" style="margin-top:auto;padding-top:18px;margin-bottom:18px;">
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Whole bean or ground to spec</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> One-way valve packaging</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Consistent roast, batch to batch</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Built for recurring orders</li>
+          </ul>
         </div>
+
+        <div class="tier anim">
+          <span class="tier__label">Private Label</span>
+          <h3 class="tier__name">12oz Private Label Bags</h3>
+          <p class="tier__vol" style="margin-bottom:8px;">Retail-ready bags with your brand — designed to create additional revenue for your truck.</p>
+
+          <div style="margin-top:12px;border-top:1px solid rgba(17,17,17,0.06);">
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">24–49 bags</div>
+              <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$12.00 <span style="font-size:13px;color:#888">/ bag</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">50–99 bags</div>
+              <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$10.50 <span style="font-size:13px;color:#888">/ bag</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(17,17,17,0.06);">
+              <div style="font-weight:600">100+ bags</div>
+              <div style="font-family:var(--font-head);font-size:20px;color:var(--black)">$9.25 <span style="font-size:13px;color:#888">/ bag</span></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:14px 0;">
+              <div style="font-weight:600">250+ bags</div>
+              <div style="font-family:var(--font-head);font-size:16px;color:#444">Contact us</div>
+            </div>
+          </div>
+
+          <ul class="tier__feats" style="margin-top:auto;padding-top:18px;margin-bottom:8px;">
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Your logo and label included</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Retail-ready packaging</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Available as whole bean or ground</li>
+            <li class="tier__feat"><svg viewBox="0 0 16 16"><polyline points="2.5 8 6 11.5 13.5 3.5"/></svg> Built for resale margins</li>
+          </ul>
+
+          <p style="color:#666;margin:6px 0 18px;font-size:14px;">Most partners retail these for $18–20 per bag.</p>
+        </div>
+      </div>
+
+      <div style="max-width:760px;margin:26px auto 0;text-align:center;">
+        <a href="#contact" class="btn btn--primary btn--full">Get Pricing</a>
       </div>
     </div>
   </section>
@@ -1330,7 +1359,7 @@
             <span class="eyebrow">Get In Touch</span>
             <h2 class="contact-headline">Let’s build your coffee program.</h2>
           </div>
-          <p class="contact-desc">Tell us about your truck and monthly volume. We'll send pricing and recommended options.</p>
+          <p class="contact-desc">Tell us about your truck and monthly volume. We'll send pricing and the best options for your operation.</p>
           <div class="contact-details">
             <div class="contact-detail">
               <svg viewBox="0 0 24 24">
@@ -1463,20 +1492,8 @@
     mClose.addEventListener('click', closeMenu);
     mLinks.forEach(l => l.addEventListener('click', closeMenu));
 
-    // --- Video modal ---
-    const playBtn    = document.getElementById('playBtn');
-    const videoModal = document.getElementById('videoModal');
-    const modalClose = document.getElementById('modalClose');
-
-    const openModal  = () => { videoModal.classList.add('open');  document.body.style.overflow = 'hidden'; };
-    const closeModal = () => { videoModal.classList.remove('open'); document.body.style.overflow = ''; };
-
-    playBtn.addEventListener('click', openModal);
-    modalClose.addEventListener('click', closeModal);
-    videoModal.addEventListener('click', e => { if (e.target === videoModal) closeModal(); });
-
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { closeModal(); closeMenu(); }
+      if (e.key === 'Escape') { closeMenu(); }
     });
 
     // --- Scroll animations ---
