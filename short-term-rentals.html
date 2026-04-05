@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
@@ -27,6 +28,7 @@
           </div>
         </a>
         <ul class="nav__links">
+          <li><a href="our-coffee.html">Our Coffee</a></li>
           <li><a href="coffee-trucks.html">Coffee Trucks</a></li>
           <li><a href="short-term-rentals.html" class="active">Short-Term Rentals</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -43,6 +45,7 @@
   <!-- MOBILE MENU -->
   <div class="nav__mobile-overlay" id="mobileOverlay">
     <button class="nav__mobile-close" id="mobileClose">&times;</button>
+    <a href="our-coffee.html" class="m-link">Our Coffee</a>
     <a href="coffee-trucks.html" class="m-link">Coffee Trucks</a>
     <a href="short-term-rentals.html" class="m-link">Short-Term Rentals</a>
     <a href="contact.html" class="m-link">Contact</a>
@@ -293,6 +296,7 @@
         <div class="form-box anim">
           <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
             <input type="hidden" name="access_key" value="4c7e2318-e569-407d-8702-f878adfc741a">
+            <input type="hidden" name="redirect" value="https://www.roastersupplyco.com/thank-you.html">
             <div class="form-stack">
               <div class="form-row">
                 <div class="f-field">
@@ -310,6 +314,12 @@
                   <input type="email" id="f-email" name="email" placeholder="jane@yourrental.com" required>
                 </div>
                 <div class="f-field">
+                  <label for="f-phone">Phone Number (optional)</label>
+                  <input type="tel" id="f-phone" name="phone" placeholder="(555) 000-0000">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="f-field">
                   <label for="f-vol">Number of Properties</label>
                   <select id="f-vol" name="volume" required>
                     <option value="" disabled selected>Select range</option>
@@ -325,6 +335,7 @@
                 <label for="f-msg">Tell Us About Your Properties</label>
                 <textarea id="f-msg" name="message" placeholder="How many properties do you manage? Estimated monthly volume? Anything we should know about your setup?"></textarea>
               </div>
+              <div class="cf-turnstile" data-sitekey="0x4AAAAAAC0yM8J_7qCr2XGz" data-theme="light"></div>
               <div>
                 <button type="submit" class="btn btn--primary btn--full" style="padding:15px 30px;font-size:14.5px" id="submitBtn">
                   Get Pricing
