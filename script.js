@@ -45,22 +45,20 @@ if (animEls.length) {
   animEls.forEach(el => io.observe(el));
 }
 
-// --- Contact form (shared demo handler) ---
-// Replace the setTimeout with a real POST to Formspree, Netlify Forms, etc.
+// --- Contact form — native submit to Web3Forms ---
 const form      = document.getElementById('contactForm');
-const success   = document.getElementById('formSuccess');
 const submitBtn = document.getElementById('submitBtn');
 
-if (form && success && submitBtn) {
+if (form && submitBtn) {
   form.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      form.reportValidity();
+      return;
+    }
+    // Validation passed — disable button to prevent double-submit,
+    // then let the form submit natively to Web3Forms.
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
-    // ▼ Replace with: fetch('/api/contact', { method:'POST', body: new FormData(form) })
-    setTimeout(() => {
-      form.style.display = 'none';
-      success.classList.add('show');
-    }, 900);
   });
 }
