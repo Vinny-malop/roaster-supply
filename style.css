@@ -236,7 +236,7 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 199;
+  z-index: 201;
   background: var(--black);
   flex-direction: column;
   align-items: center;

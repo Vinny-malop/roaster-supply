@@ -28,7 +28,7 @@
           <li><a href="coffee-trucks.html">Coffee Trucks</a></li>
           <li><a href="short-term-rentals.html">Short-Term Rentals</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="client-portal.html" class="active">Client Portal</a></li>
+          <!-- <li><a href="client-portal.html" class="active">Client Portal</a></li> -->
         </ul>
         <a href="contact.html" class="btn btn--ghost nav__cta-desktop">Get Pricing</a>
         <button class="nav__burger" id="burger" aria-label="Open menu">
@@ -45,19 +45,19 @@
     <a href="coffee-trucks.html" class="m-link">Coffee Trucks</a>
     <a href="short-term-rentals.html" class="m-link">Short-Term Rentals</a>
     <a href="contact.html" class="m-link">Contact</a>
-    <a href="client-portal.html" class="m-link">Client Portal</a>
+    <!-- <a href="client-portal.html" class="m-link">Client Portal</a> -->
     <a href="contact.html" class="btn btn--ghost">Get Pricing</a>
   </div>
 
 
-  <!-- ========================================
-       CLIENT PORTAL
-       Future: connect to Auth0, Supabase, or custom auth.
-       Replace #client-portal-app with authenticated content.
-  ======================================== -->
+  <!--
+  ========================================
+  CLIENT PORTAL — COMMENTED OUT
+  Uncomment this block to restore the portal page.
+  ========================================
+
   <div class="portal-wrap" id="client-portal-app" data-status="pending">
 
-    <!-- SIDEBAR -->
     <aside class="portal-sidebar">
       <p class="portal-sidebar__label" style="margin-top:16px;">Menu</p>
       <nav class="portal-nav">
@@ -84,7 +84,6 @@
       </nav>
     </aside>
 
-    <!-- MAIN -->
     <main class="portal-main">
       <div style="margin-bottom:36px;">
         <span class="eyebrow" style="color:var(--accent);">Client Portal</span>
@@ -92,14 +91,12 @@
         <p style="font-size:14.5px;color:#777;line-height:1.7;">Client portal access and account tools will be available here.</p>
       </div>
 
-      <!-- Login placeholder -->
-      <!-- ================================================
-           AUTH INTEGRATION PLACEHOLDER
-           Replace this block with your auth provider login:
-           - Auth0: https://auth0.com/docs/quickstart/spa
-           - Supabase: https://supabase.com/docs/guides/auth
-           - Custom JWT: replace with your login component
-      ================================================= -->
+      AUTH INTEGRATION PLACEHOLDER
+      Replace this block with your auth provider login:
+      - Auth0: https://auth0.com/docs/quickstart/spa
+      - Supabase: https://supabase.com/docs/guides/auth
+      - Custom JWT: replace with your login component
+
       <div id="portal-auth-container" data-status="pending" style="max-width:480px;">
         <div class="portal-placeholder">
           <div class="portal-placeholder__icon">
@@ -111,7 +108,6 @@
         </div>
       </div>
 
-      <!-- Portal section previews -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:48px;opacity:0.45;pointer-events:none;" aria-hidden="true">
 
         <div style="border:1.5px dashed rgba(17,17,17,0.14);border-radius:var(--radius-lg);padding:24px;">
@@ -139,6 +135,8 @@
 
   </div>
 
+  ======================================== -->
+
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -163,7 +161,7 @@
           <div class="footer__col">
             <span class="footer__col-label">Company</span>
             <a href="contact.html">Contact</a>
-            <a href="client-portal.html">Client Portal</a>
+            <!-- <a href="client-portal.html">Client Portal</a> -->
           </div>
           <div class="footer__col">
             <span class="footer__col-label">Legal</span>
