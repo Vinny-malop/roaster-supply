@@ -65,10 +65,16 @@
     <div class="hero__body">
       <span class="hero__kicker">Premium Brazilian Coffee · For Short-Term Rentals</span>
       <h1 class="hero__title">Better reviews start with better coffee.</h1>
+      <p style="font-size:clamp(13px,1.4vw,15px);font-weight:500;letter-spacing:.3px;color:rgba(255,255,255,0.5);margin-bottom:14px;text-transform:none;">A simple upgrade your guests actually notice.</p>
       <p class="hero__sub">A simple guest upgrade that makes your properties feel more thoughtful — and gives guests one more reason to leave a 5-star review.</p>
       <div class="hero__ctas">
-        <a href="#contact" class="btn btn--primary">Get Pricing</a>
-        <a href="#how" class="btn btn--ghost-white">See How It Works</a>
+        <a href="#contact" class="btn btn--primary">Set up my properties</a>
+        <a href="#contact" class="btn btn--ghost-white">Request a free sample</a>
+      </div>
+      <div style="margin-top:18px;display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <!-- SHOPIFY PLACEHOLDER — swap href with Buy Button URL when ready -->
+        <a href="#shopify-buy-now" id="shopify-buy-now" style="font-size:13.5px;color:rgba(255,255,255,0.48);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(255,255,255,0.18);">Buy now</a>
+        <p style="font-size:12px;color:rgba(255,255,255,0.28);line-height:1.55;max-width:320px;text-align:center;">After checkout, we'll contact you to customize your labels and packaging.</p>
       </div>
     </div>
   </section>
@@ -183,7 +189,9 @@
       <div class="anim">
         <span class="eyebrow">The Math</span>
         <h2 style="color:var(--white);margin-bottom:20px;">High impact. Low cost.</h2>
-        <p style="color:rgba(255,255,255,0.65);font-size:clamp(16px,1.9vw,20px);line-height:1.72;font-weight:300;margin-bottom:16px;">From about $7 per stay, you can give guests a better experience with almost no added complexity.</p>
+        <p style="color:rgba(255,255,255,0.38);font-size:14px;letter-spacing:.3px;margin-bottom:16px;">And the best part...</p>
+        <p style="color:rgba(255,255,255,0.65);font-size:clamp(16px,1.9vw,20px);line-height:1.72;font-weight:300;margin-bottom:10px;">From about $7 per stay, you can give guests a better experience with almost no added complexity.</p>
+        <p style="color:rgba(255,255,255,0.38);font-size:14px;line-height:1.7;margin-bottom:16px;">Less than 0.5% of the average stay.</p>
         <p style="color:rgba(255,255,255,0.42);font-size:15px;line-height:1.7;">One of the simplest upgrades you can make across your properties.</p>
       </div>
     </div>
@@ -215,7 +223,7 @@
         <div class="step anim">
           <div class="step__num">3</div>
           <h3 class="step__title">We deliver ready-to-use coffee</h3>
-          <p class="step__text">Your coffee arrives ready to place in your units — clean, consistent, and easy to restock.</p>
+          <p class="step__text">We roast your coffee after you order. It arrives labeled and ready to go — fresh, high-quality Brazilian coffee your guests will notice.</p>
         </div>
       </div>
     </div>
@@ -241,7 +249,11 @@
           <div style="border-top:1px solid rgba(17,17,17,0.07);padding-top:24px;margin-bottom:28px;">
             <p style="font-size:14.5px;color:#666;line-height:1.7;">Better pricing available for larger operators. Volume tiers apply at 10, 25, and 50+ units.</p>
           </div>
-          <a href="#contact" class="btn btn--primary btn--full" style="padding:14px 30px;">Get Pricing</a>
+          <a href="#contact" class="btn btn--primary btn--full" style="padding:14px 30px;margin-bottom:12px;">Set up my properties</a>
+          <a href="#contact" class="btn btn--ghost btn--full" style="padding:12px 30px;margin-bottom:16px;">Request a free sample</a>
+          <!-- SHOPIFY PLACEHOLDER — swap href with Buy Button URL when ready -->
+          <a href="#shopify-buy-now" style="display:block;text-align:center;font-size:13.5px;color:#999;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(17,17,17,0.18);margin-bottom:12px;">Buy now</a>
+          <p style="font-size:12.5px;color:#aaa;line-height:1.6;text-align:center;">After checkout, we'll contact you to customize your labels and packaging.</p>
         </div>
       </div>
     </div>
@@ -259,7 +271,7 @@
         <div class="contact-left anim">
           <div>
             <span class="eyebrow">Get In Touch</span>
-            <h2 class="contact-headline">Let's improve your guest experience.</h2>
+            <h2 class="contact-headline">Let's improve your reviews.</h2>
           </div>
           <p class="contact-desc">Tell us how many properties you manage and your estimated monthly volume. We'll send pricing and the best setup for your business.</p>
           <div class="contact-details">
@@ -279,7 +291,8 @@
         </div>
 
         <div class="form-box anim">
-          <form id="contactForm" novalidate>
+          <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="4c7e2318-e569-407d-8702-f878adfc741a">
             <div class="form-stack">
               <div class="form-row">
                 <div class="f-field">
@@ -310,7 +323,7 @@
               </div>
               <div class="f-field">
                 <label for="f-msg">Tell Us About Your Properties</label>
-                <textarea id="f-msg" name="message" placeholder="How many properties do you manage? Estimated monthly volume? Anything we should know?"></textarea>
+                <textarea id="f-msg" name="message" placeholder="How many properties do you manage? Estimated monthly volume? Anything we should know about your setup?"></textarea>
               </div>
               <div>
                 <button type="submit" class="btn btn--primary btn--full" style="padding:15px 30px;font-size:14.5px" id="submitBtn">
