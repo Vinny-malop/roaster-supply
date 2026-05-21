@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import PageHeroSection from "@/components/our-coffee/PageHeroSection";
+import PageHero from "@/components/common/PageHero";
 import TheCoffeeSection from "@/components/our-coffee/TheCoffeeSection";
 import RoastedToOrderSection from "@/components/our-coffee/RoastedToOrderSection";
 import WhyItMattersSection from "@/components/our-coffee/WhyItMattersSection";
@@ -14,7 +14,11 @@ export const metadata: Metadata = {
 export default function OurCoffeePage() {
   return (
     <>
-      <PageHeroSection />
+      <PageHero
+        kicker="Single-Origin Brazilian Specialty Coffee"
+        title="From the Farm. Roasted Fresh. Shipped Fast."
+        sub="Single-origin Brazilian specialty coffee, roasted to order and air freighted to your door."
+      />
       <TheCoffeeSection />
       <RoastedToOrderSection />
       <WhyItMattersSection />
