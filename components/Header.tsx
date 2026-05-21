@@ -1,9 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isActive = (href: string) =>
+    pathname === href ? "active" : undefined;
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -46,16 +50,30 @@ export default function Header() {
             </Link>
             <ul className="nav__links">
               <li>
-                <Link href="/our-coffee">Our Coffee</Link>
+                <Link href="/our-coffee" className={isActive("/our-coffee")}>
+                  Our Coffee
+                </Link>
               </li>
               <li>
-                <Link href="/coffee-trucks">Coffee Trucks</Link>
+                <Link
+                  href="/coffee-trucks"
+                  className={isActive("/coffee-trucks")}
+                >
+                  Coffee Trucks
+                </Link>
               </li>
               <li>
-                <Link href="/short-term-rentals">Short-Term Rentals</Link>
+                <Link
+                  href="/short-term-rentals"
+                  className={isActive("/short-term-rentals")}
+                >
+                  Short-Term Rentals
+                </Link>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <Link href="/contact" className={isActive("/contact")}>
+                  Contact
+                </Link>
               </li>
               {/* <li><Link href="/client-portal">Client Portal</Link></li> */}
             </ul>

@@ -1,0 +1,24 @@
+import type { Metadata } from "next";
+import PageHeroSection from "@/components/our-coffee/PageHeroSection";
+import TheCoffeeSection from "@/components/our-coffee/TheCoffeeSection";
+import RoastedToOrderSection from "@/components/our-coffee/RoastedToOrderSection";
+import WhyItMattersSection from "@/components/our-coffee/WhyItMattersSection";
+import FinalCtaSection from "@/components/our-coffee/FinalCtaSection";
+
+export const metadata: Metadata = {
+  title: "Our Coffee — Roaster Supply Co.",
+  description:
+    "Single-origin Brazilian specialty coffee. 100% Arabica, SCA 82+, roasted to order and shipped fresh. Sourced from Minas Gerais and Espírito Santo.",
+};
+
+export default function OurCoffeePage() {
+  return (
+    <>
+      <PageHeroSection />
+      <TheCoffeeSection />
+      <RoastedToOrderSection />
+      <WhyItMattersSection />
+      <FinalCtaSection />
+    </>
+  );
+}
