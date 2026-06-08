@@ -64,7 +64,7 @@ export default function Header() {
                   href="/coffee-trucks"
                   className={isActive("/coffee-trucks")}
                 >
-                  Coffee Trucks
+                  Coffee Trucks &amp; Shops
                 </Link>
               </li>
               <li>
@@ -118,7 +118,7 @@ export default function Header() {
           Our Coffee
         </Link>
         <Link href="/coffee-trucks" className="m-link" onClick={closeMenu}>
-          Coffee Trucks
+          Coffee Trucks &amp; Shops
         </Link>
         <Link href="/short-term-rentals" className="m-link" onClick={closeMenu}>
           Short-Term Rentals

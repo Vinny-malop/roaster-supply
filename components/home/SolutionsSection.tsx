@@ -14,14 +14,14 @@ export default function SolutionsSection() {
           <div className="sol-card sol-card--dark anim">
             <div className="sol-card__accent-bar"></div>
             <div className="sol-card__body">
-              <span className="sol-card__tag">For Coffee Trucks</span>
-              <h3 className="sol-card__title">Coffee Trucks</h3>
+              <span className="sol-card__tag">For Coffee Trucks &amp; Shops</span>
+              <h3 className="sol-card__title">Coffee Trucks &amp; Shops</h3>
               <p className="sol-card__text">
-                Wholesale 5lb bags and private label retail coffee designed to
-                improve margins and grow revenue.
+                Wholesale 5lb bags and private label retail coffee for trucks
+                and cafés — designed to improve margins and grow revenue.
               </p>
               <Link href="/coffee-trucks" className="btn btn--ghost">
-                View Coffee Truck Solutions
+                View Solutions
               </Link>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function ProductsSection() {
       <div className="wrap">
         <div className="sec-head anim">
           <span className="eyebrow">Our Products</span>
-          <h2>Two ways to grow your truck.</h2>
+          <h2>Two ways to grow your business.</h2>
           <p>One for daily service. One for retail revenue.</p>
         </div>
 

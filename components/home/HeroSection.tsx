@@ -24,9 +24,6 @@ export default function HeroSection() {
         />
       </div>
       <div className="hero__body">
-        <span className="hero__kicker">
-          Brazilian Specialty Coffee · Built for Operators
-        </span>
         <h1 className="hero__title">Brazilian Coffee Built for Operators.</h1>
         <p className="hero__sub">
           Roast-to-order wholesale coffee for coffee trucks, short-term rentals,

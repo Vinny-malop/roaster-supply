@@ -4,7 +4,7 @@ export default function WhyBrazilianSection() {
       <div className="wrap">
         <div className="sec-head sec-head--center anim">
           <span className="eyebrow">Why Brazilian Coffee</span>
-          <h2>Why Brazilian coffee works for coffee trucks</h2>
+          <h2>Why Brazilian coffee works for coffee trucks &amp; shops</h2>
           <p>
             Reliable, approachable, and built for consistency in high-volume
             service.

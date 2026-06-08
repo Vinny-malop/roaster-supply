@@ -13,10 +13,10 @@ export default function HeroSection() {
       </div>
       <div className="hero__body">
         <span className="hero__kicker">
-          Premium Brazilian · Built for Trucks
+          Premium Brazilian · Built for Trucks &amp; Shops
         </span>
         <h1 className="hero__title">
-          Brazilian Coffee Built for Coffee Trucks.
+          Brazilian Coffee Built for Coffee Trucks &amp; Shops.
         </h1>
         <p className="hero__sub">
           Consistent quality, competitive wholesale pricing, and private label

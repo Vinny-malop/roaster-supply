@@ -8,11 +8,11 @@ import ContactSection from "@/components/coffee-trucks/ContactSection";
 
 export const metadata: Metadata = {
   title:
-    "Damata Coffee Wholesale — Brazilian Specialty Coffee for Coffee Trucks",
+    "Damata Coffee Wholesale — Brazilian Specialty Coffee for Coffee Trucks & Shops",
   description:
-    "Wholesale 5lb bags and private label retail coffee for coffee trucks. Roast-to-order Brazilian specialty coffee, volume pricing, and recurring delivery.",
+    "Wholesale 5lb bags and private label retail coffee for coffee trucks and coffee shops. Roast-to-order Brazilian specialty coffee, volume pricing, and recurring delivery.",
   openGraph: {
-    title: "Damata Coffee Wholesale — Coffee for Coffee Trucks",
+    title: "Damata Coffee Wholesale — Coffee for Coffee Trucks & Shops",
     description:
       "Consistent quality, volume wholesale pricing, and private label options — built for operators who want to serve better coffee and grow revenue.",
     type: "website",
