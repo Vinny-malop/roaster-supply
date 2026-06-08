@@ -24,17 +24,14 @@ export default function ProductSection() {
         <div style={{ maxWidth: 560, margin: "52px auto 0" }}>
           <div className="p-card anim">
             <div className="p-card__img p-card__img--dark">
-              <div className="bag">
-                <div className="bag__shape bag__shape--dark">
-                  <span className="bag__weight">1x</span>
-                  <span className="bag__sub">Specialty Grade</span>
-                  <span className="bag__brand">
-                    Damata
-                    <br />
-                    Coffee
-                  </span>
-                </div>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/bag-8oz.png"
+                alt="Damata 8oz private-label guest coffee bag"
+                className="p-card__photo"
+                width={1254}
+                height={1254}
+              />
               <span className="p-badge">Guest Ready</span>
             </div>
             <div className="p-card__body">

@@ -21,17 +21,14 @@ export default function ProductsSection() {
         <div className="products-grid">
           <div className="p-card anim">
             <div className="p-card__img p-card__img--dark">
-              <div className="bag">
-                <div className="bag__shape bag__shape--dark">
-                  <span className="bag__weight">5lb</span>
-                  <span className="bag__sub">Specialty Grade</span>
-                  <span className="bag__brand">
-                    Damata
-                    <br />
-                    Coffee
-                  </span>
-                </div>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/bag-5lb.png"
+                alt="Damata 5lb wholesale coffee bag"
+                className="p-card__photo"
+                width={1254}
+                height={1254}
+              />
               <span className="p-badge">Operational</span>
             </div>
             <div className="p-card__body">
@@ -63,26 +60,15 @@ export default function ProductsSection() {
           </div>
 
           <div className="p-card anim">
-            <div className="p-card__img p-card__img--light">
-              <div className="bag">
-                <div className="bag__shape bag__shape--cream">
-                  <span className="bag__weight">12oz</span>
-                  <span
-                    className="bag__sub"
-                    style={{ color: "rgba(42,37,32,0.42)" }}
-                  >
-                    Your Brand
-                  </span>
-                  <span
-                    className="bag__brand"
-                    style={{ color: "rgba(42,37,32,0.65)" }}
-                  >
-                    YOUR TRUCK
-                    <br />
-                    NAME HERE
-                  </span>
-                </div>
-              </div>
+            <div className="p-card__img p-card__img--dark">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/bag-12oz.png"
+                alt="Damata 12oz private-label coffee bag"
+                className="p-card__photo"
+                width={1254}
+                height={1254}
+              />
               <span className="p-badge">Private Label</span>
             </div>
             <div className="p-card__body">
