@@ -1,4 +1,5 @@
-import Link from "next/link";
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
 
 export default function HeroSection() {
   return (
@@ -9,20 +10,27 @@ export default function HeroSection() {
           <div className="hero__placeholder"></div>
         </div>
         <div className="hero__overlay"></div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/damata-branch-cream.png"
+          alt=""
+          aria-hidden="true"
+          className="hero__branch"
+        />
       </div>
       <div className="hero__body">
         <span className="hero__kicker">
-          Premium Brazilian Coffee · Built for Operators
+          Brazilian Specialty Coffee · Built for Operators
         </span>
         <h1 className="hero__title">Brazilian Coffee Built for Operators.</h1>
         <p className="hero__sub">
-          Premium coffee supply for coffee trucks, short-term rentals, and
-          hospitality businesses.
+          Roast-to-order wholesale coffee for coffee trucks, short-term rentals,
+          and hospitality businesses.
         </p>
         <div className="hero__ctas">
-          <Link href="/contact" className="btn btn--primary">
-            Get Pricing
-          </Link>
+          <a href={SIGNUP_URL} className="btn btn--accent">
+            Apply for Wholesale Access
+          </a>
           <a href="#solutions" className="btn btn--ghost-white">
             Explore Solutions
           </a>

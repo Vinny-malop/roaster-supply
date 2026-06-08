@@ -1,4 +1,5 @@
-import Link from "next/link";
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
 
 export default function HeroSection() {
   return (
@@ -23,9 +24,9 @@ export default function HeroSection() {
           grow revenue.
         </p>
         <div className="hero__ctas">
-          <Link href="/contact" className="btn btn--primary">
-            Get Pricing
-          </Link>
+          <a href={SIGNUP_URL} className="btn btn--accent">
+            Apply for Wholesale Access
+          </a>
           <a href="#products" className="btn btn--ghost-white">
             View Products
           </a>

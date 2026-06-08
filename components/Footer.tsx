@@ -6,17 +6,19 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer__inner">
           <div className="footer__brand">
-            <Link href="/" className="logo">
-              <div className="logo__icon">
-                <div className="logo__dot"></div>
-              </div>
-              <div className="logo__text">
-                <span className="logo__name">Roaster Supply Co.</span>
-                <span className="logo__sub">Brazilian Specialty Coffee</span>
-              </div>
+            <Link href="/" className="logo" aria-label="Damata Coffee Wholesale — home">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/damata-logo.png"
+                alt="Damata Coffee Wholesale"
+                className="logo__img"
+                width={494}
+                height={495}
+              />
             </Link>
             <p className="footer__tagline">
-              Premium Brazilian coffee for operators who take quality seriously.
+              Roast-to-order Brazilian specialty coffee for operators who take
+              quality seriously.
             </p>
           </div>
           <div className="footer__cols">
@@ -39,7 +41,7 @@ export default function Footer() {
         </div>
         <div className="footer__bottom">
           <p className="footer__copy">
-            &copy; 2026 Roaster Supply Co. All rights reserved.
+            &copy; 2026 Damata Coffee LLC. All rights reserved.
           </p>
           <div className="footer__legal">
             <Link href="/privacy-policy">Privacy</Link>

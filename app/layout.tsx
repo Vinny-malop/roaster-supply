@@ -6,13 +6,14 @@ import Footer from "@/components/Footer";
 import ScrollAnimations from "@/components/ScrollAnimations";
 
 export const metadata: Metadata = {
-  title: "Roaster Supply Co. — Brazilian Specialty Coffee for Operators",
+  metadataBase: new URL("https://wholesale.damata.coffee"),
+  title: "Damata Coffee Wholesale — Brazilian Specialty Coffee for Operators",
   description:
-    "Premium Brazilian specialty coffee supply for coffee trucks, short-term rentals, and hospitality operators. Consistent quality, wholesale pricing, private label available.",
+    "Roast-to-order Brazilian specialty coffee for coffee trucks, short-term rentals, and hospitality operators. Wholesale pricing, private label available, shipped fresh.",
   openGraph: {
-    title: "Roaster Supply Co. — Brazilian Coffee for Operators",
+    title: "Damata Coffee Wholesale — Brazilian Coffee for Operators",
     description:
-      "Premium coffee supply for coffee trucks, short-term rentals, and hospitality businesses.",
+      "Roast-to-order Brazilian specialty coffee supply for coffee trucks, short-term rentals, and hospitality businesses.",
     type: "website",
   },
 };
@@ -32,7 +33,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>

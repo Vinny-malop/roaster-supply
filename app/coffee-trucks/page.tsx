@@ -8,13 +8,13 @@ import ContactSection from "@/components/coffee-trucks/ContactSection";
 
 export const metadata: Metadata = {
   title:
-    "Roaster Supply Co. — Brazilian Specialty Coffee for Coffee Trucks",
+    "Damata Coffee Wholesale — Brazilian Specialty Coffee for Coffee Trucks",
   description:
-    "Wholesale 5lb bags and private label retail coffee for coffee trucks. Consistent Brazilian specialty coffee, competitive pricing, and recurring delivery.",
+    "Wholesale 5lb bags and private label retail coffee for coffee trucks. Roast-to-order Brazilian specialty coffee, volume pricing, and recurring delivery.",
   openGraph: {
-    title: "Roaster Supply Co. — Coffee for Coffee Trucks",
+    title: "Damata Coffee Wholesale — Coffee for Coffee Trucks",
     description:
-      "Consistent quality, competitive wholesale pricing, and private label options — built for operators who want to serve better coffee and grow revenue.",
+      "Consistent quality, volume wholesale pricing, and private label options — built for operators who want to serve better coffee and grow revenue.",
     type: "website",
   },
 };

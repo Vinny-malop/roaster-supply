@@ -3,8 +3,8 @@ import PageHero from "@/components/common/PageHero";
 import LegalContent from "@/components/legal/LegalContent";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Roaster Supply Co.",
-  description: "Privacy Policy for Roaster Supply Co.",
+  title: "Privacy Policy — Damata Coffee Wholesale",
+  description: "Privacy Policy for Damata Coffee Wholesale (Damata Coffee LLC).",
 };
 
 export default function PrivacyPolicyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
         title="Privacy Policy"
         sub="How we collect, use, and protect your information."
       />
-      <LegalContent lastUpdated="April 2026">
+      <LegalContent lastUpdated="June 2026">
         <h2>1. Information We Collect</h2>
         <p>
           We collect information you provide directly to us when you fill out a
@@ -97,11 +97,17 @@ export default function PrivacyPolicyPage() {
           us at:
         </p>
         <p>
-          <strong>Roaster Supply Co.</strong>
+          <strong>Damata Coffee LLC</strong> (Damata Coffee Wholesale)
           <br />
-          hello@roastersupplyco.com
-          <br />
-          (888) 762-7837
+          contact@damata.coffee
+        </p>
+        <p>
+          Order-specific terms and the policies governing your purchases are
+          available on our store at{" "}
+          <a href="https://shop.wholesale.damata.coffee/policies">
+            shop.wholesale.damata.coffee/policies
+          </a>
+          .
         </p>
       </LegalContent>
     </>

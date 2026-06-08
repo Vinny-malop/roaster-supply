@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Thank You — Roaster Supply Co.",
+  title: "Thank You — Damata Coffee Wholesale",
   robots: { index: false },
 };
 

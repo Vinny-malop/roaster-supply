@@ -1,3 +1,6 @@
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
+
 export default function HeroSection() {
   return (
     <section className="hero" id="home">
@@ -33,11 +36,11 @@ export default function HeroSection() {
           review.
         </p>
         <div className="hero__ctas">
-          <a href="#contact" className="btn btn--primary">
+          <a href={SIGNUP_URL} className="btn btn--accent">
             Set up my properties
           </a>
-          <a href="#contact" className="btn btn--ghost-white">
-            Request a free sample
+          <a href="#pricing" className="btn btn--ghost-white">
+            See pricing
           </a>
         </div>
       </div>

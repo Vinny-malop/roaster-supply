@@ -1,4 +1,5 @@
-import Link from "next/link";
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
 
 export default function FinalCtaSection() {
   return (
@@ -18,16 +19,16 @@ export default function FinalCtaSection() {
               marginBottom: 40,
             }}
           >
-            Tell us about your business and we&apos;ll recommend the best setup
-            for your operation.
+            Apply for a wholesale account and we&apos;ll set you up with the
+            right pricing for your operation — usually within 1–2 business days.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={SIGNUP_URL}
             className="btn btn--accent"
             style={{ fontSize: 15, padding: "15px 36px" }}
           >
-            Get Pricing
-          </Link>
+            Apply for Wholesale Access
+          </a>
         </div>
       </div>
     </section>

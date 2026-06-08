@@ -3,9 +3,9 @@ import PageHero from "@/components/common/PageHero";
 import ContactSection from "@/components/contact/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact — Roaster Supply Co.",
+  title: "Contact — Damata Coffee Wholesale",
   description:
-    "Get in touch with Roaster Supply Co. Tell us about your business and we'll send pricing and recommendations.",
+    "Get in touch with Damata Coffee Wholesale. Apply for a wholesale account or ask us about volume pricing, private label, and custom quotes.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
       <PageHero
         kicker="Get In Touch"
         title="Let's build your coffee program."
-        sub="Tell us about your business and we'll send pricing and the best options for your operation."
+        sub="Apply for a wholesale account, or reach out about volume pricing, private label, and custom quotes."
       />
       <ContactSection />
     </>

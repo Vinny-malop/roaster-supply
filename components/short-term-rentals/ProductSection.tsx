@@ -29,9 +29,9 @@ export default function ProductSection() {
                   <span className="bag__weight">1x</span>
                   <span className="bag__sub">Specialty Grade</span>
                   <span className="bag__brand">
-                    Roaster
+                    Damata
                     <br />
-                    Supply Co.
+                    Coffee
                   </span>
                 </div>
               </div>

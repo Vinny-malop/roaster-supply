@@ -3,8 +3,9 @@ import PageHero from "@/components/common/PageHero";
 import LegalContent from "@/components/legal/LegalContent";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — Roaster Supply Co.",
-  description: "Terms of Service for Roaster Supply Co.",
+  title: "Terms of Service — Damata Coffee Wholesale",
+  description:
+    "Terms of Service for Damata Coffee Wholesale (Damata Coffee LLC).",
 };
 
 export default function TermsOfServicePage() {
@@ -15,12 +16,13 @@ export default function TermsOfServicePage() {
         title="Terms of Service"
         sub="Please read these terms carefully before placing an order or using our services."
       />
-      <LegalContent lastUpdated="April 2026">
+      <LegalContent lastUpdated="June 2026">
         <h2>1. Acceptance of Terms</h2>
         <p>
-          By accessing our website or placing an order with Roaster Supply Co.,
-          you agree to be bound by these Terms of Service. If you do not agree
-          to these terms, please do not use our services.
+          By accessing our website or placing an order with Damata Coffee LLC
+          (operating as Damata Coffee Wholesale), you agree to be bound by these
+          Terms of Service. If you do not agree to these terms, please do not use
+          our services.
         </p>
 
         <h2>2. Products and Orders</h2>
@@ -72,14 +74,14 @@ export default function TermsOfServicePage() {
         <h2>7. Intellectual Property</h2>
         <p>
           All content on this website, including text, graphics, and logos, is
-          the property of Roaster Supply Co. and may not be reproduced without
+          the property of Damata Coffee LLC and may not be reproduced without
           written permission. Client-provided branding assets remain the
           property of the client.
         </p>
 
         <h2>8. Limitation of Liability</h2>
         <p>
-          To the fullest extent permitted by law, Roaster Supply Co. shall not
+          To the fullest extent permitted by law, Damata Coffee LLC shall not
           be liable for any indirect, incidental, special, or consequential
           damages arising from your use of our products or services. Our total
           liability shall not exceed the amount paid for the specific order in
@@ -89,7 +91,8 @@ export default function TermsOfServicePage() {
         <h2>9. Governing Law</h2>
         <p>
           These Terms of Service are governed by the laws of the State of
-          [State], without regard to its conflict of law provisions.
+          Florida, United States, without regard to its conflict of law
+          provisions.
         </p>
 
         <h2>10. Changes to Terms</h2>
@@ -103,11 +106,17 @@ export default function TermsOfServicePage() {
         <h2>11. Contact</h2>
         <p>If you have questions about these terms, please contact us:</p>
         <p>
-          <strong>Roaster Supply Co.</strong>
+          <strong>Damata Coffee LLC</strong> (Damata Coffee Wholesale)
           <br />
-          hello@roastersupplyco.com
-          <br />
-          (888) 762-7837
+          contact@damata.coffee
+        </p>
+        <p>
+          The full set of policies governing your purchases — shipping, refunds,
+          and resale terms — is available on our store at{" "}
+          <a href="https://shop.wholesale.damata.coffee/policies">
+            shop.wholesale.damata.coffee/policies
+          </a>
+          .
         </p>
       </LegalContent>
     </>

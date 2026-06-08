@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
+
 export default function Header() {
   const pathname = usePathname();
   const isActive = (href: string) =>
@@ -39,14 +42,16 @@ export default function Header() {
       <nav className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
         <div className="wrap">
           <div className="nav__inner">
-            <Link href="/" className="logo logo--light">
-              <div className="logo__icon">
-                <div className="logo__dot"></div>
-              </div>
-              <div className="logo__text">
-                <span className="logo__name">Roaster Supply Co.</span>
-                <span className="logo__sub">Brazilian Specialty Coffee</span>
-              </div>
+            <Link href="/" className="logo logo--light" aria-label="Damata Coffee Wholesale — home">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/damata-logo-cream.png"
+                alt="Damata Coffee Wholesale"
+                className="logo__img"
+                width={494}
+                height={495}
+              />
+              <span className="logo__sub">Wholesale</span>
             </Link>
             <ul className="nav__links">
               <li>
@@ -77,9 +82,12 @@ export default function Header() {
               </li>
               {/* <li><Link href="/client-portal">Client Portal</Link></li> */}
             </ul>
-            <Link href="/contact" className="btn btn--ghost nav__cta-desktop">
-              Get Pricing
-            </Link>
+            <a
+              href={SIGNUP_URL}
+              className="btn btn--ghost nav__cta-desktop"
+            >
+              Apply for Access
+            </a>
             <button
               className="nav__burger"
               id="burger"
@@ -118,10 +126,9 @@ export default function Header() {
         <Link href="/contact" className="m-link" onClick={closeMenu}>
           Contact
         </Link>
-        {/* <Link href="/client-portal" className="m-link" onClick={closeMenu}>Client Portal</Link> */}
-        <Link href="/contact" className="btn btn--ghost" onClick={closeMenu}>
-          Get Pricing
-        </Link>
+        <a href={SIGNUP_URL} className="btn btn--ghost" onClick={closeMenu}>
+          Apply for Access
+        </a>
       </div>
     </>
   );

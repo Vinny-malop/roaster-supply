@@ -1,4 +1,5 @@
-import Link from "next/link";
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
 
 function TierFeatCheck() {
   return (
@@ -16,8 +17,8 @@ export default function PricingSection() {
           <span className="eyebrow">Pricing</span>
           <h2>Simple wholesale pricing</h2>
           <p>
-            Volume-based wholesale pricing for 5lb bags. Better pricing as you
-            scale.
+            Volume-based pricing that improves as you scale. Approved accounts
+            see live per-bag rates and tier discounts at checkout.
           </p>
         </div>
 
@@ -26,103 +27,34 @@ export default function PricingSection() {
             <span className="tier__label">5lb Bags — Wholesale</span>
             <h3 className="tier__name">5lb Wholesale Bags</h3>
             <p className="tier__vol">
-              Built for daily operations — consistent, easy to dial in, and
-              priced for high-volume service.
+              Built for daily service — consistent, easy to dial in, and priced
+              for high-volume operations.
             </p>
 
-            <div
-              style={{
-                marginTop: 12,
-                borderTop: "1px solid rgba(17,17,17,0.06)",
-              }}
-            >
+            <div style={{ padding: "8px 0 4px" }}>
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(17,17,17,0.06)",
+                  fontFamily: "var(--font-head)",
+                  fontSize: "clamp(34px,5vw,46px)",
+                  fontWeight: 700,
+                  lineHeight: 1,
+                  color: "var(--black)",
                 }}
               >
-                <div style={{ fontWeight: 600 }}>4–9 bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 20,
-                    color: "var(--black)",
-                  }}
-                >
-                  $73{" "}
-                  <span style={{ fontSize: 13, color: "#888" }}>/ bag</span>
-                </div>
+                From $65
+                <span style={{ fontSize: 15, color: "#888", fontWeight: 400 }}>
+                  {" "}
+                  / bag
+                </span>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(17,17,17,0.06)",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>10–19 bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 20,
-                    color: "var(--black)",
-                  }}
-                >
-                  $65{" "}
-                  <span style={{ fontSize: 13, color: "#888" }}>/ bag</span>
-                </div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(17,17,17,0.06)",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>20+ bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 20,
-                    color: "var(--black)",
-                  }}
-                >
-                  $60{" "}
-                  <span style={{ fontSize: 13, color: "#888" }}>/ bag</span>
-                </div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>40+ bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 16,
-                    color: "#444",
-                  }}
-                >
-                  Contact us
-                </div>
-              </div>
+              <p style={{ fontSize: 13.5, color: "#888", marginTop: 8 }}>
+                ≈ $13 / lb at volume · better per-bag rates as you scale
+              </p>
             </div>
 
             <ul
               className="tier__feats"
-              style={{
-                marginTop: "auto",
-                paddingTop: 18,
-                marginBottom: 8,
-              }}
+              style={{ marginTop: "auto", paddingTop: 22, marginBottom: 8 }}
             >
               <li className="tier__feat">
                 <TierFeatCheck /> Whole bean or ground to spec
@@ -144,105 +76,32 @@ export default function PricingSection() {
 
           <div className="tier anim">
             <span className="tier__label">Private Label</span>
-            <h3 className="tier__name">12oz Private Label Bags</h3>
+            <h3 className="tier__name">12oz &amp; 8oz Private Label</h3>
             <p className="tier__vol">
-              Retail-ready bags with your brand — designed to create additional
-              revenue for your truck.
+              Retail-ready bags with your brand — a new revenue line for your
+              truck, without running a roastery of your own.
             </p>
 
-            <div
-              style={{
-                marginTop: 12,
-                borderTop: "1px solid rgba(17,17,17,0.06)",
-              }}
-            >
+            <div style={{ padding: "8px 0 4px" }}>
               <div
                 style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(17,17,17,0.06)",
+                  fontFamily: "var(--font-head)",
+                  fontSize: "clamp(28px,4vw,38px)",
+                  fontWeight: 700,
+                  lineHeight: 1.05,
+                  color: "var(--black)",
                 }}
               >
-                <div style={{ fontWeight: 600 }}>24–49 bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 20,
-                    color: "var(--black)",
-                  }}
-                >
-                  $12.00{" "}
-                  <span style={{ fontSize: 13, color: "#888" }}>/ bag</span>
-                </div>
+                Your brand, retail-ready
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(17,17,17,0.06)",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>50–99 bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 20,
-                    color: "var(--black)",
-                  }}
-                >
-                  $10.50{" "}
-                  <span style={{ fontSize: 13, color: "#888" }}>/ bag</span>
-                </div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                  borderBottom: "1px solid rgba(17,17,17,0.06)",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>100+ bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 20,
-                    color: "var(--black)",
-                  }}
-                >
-                  $9.25{" "}
-                  <span style={{ fontSize: 13, color: "#888" }}>/ bag</span>
-                </div>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "14px 0",
-                }}
-              >
-                <div style={{ fontWeight: 600 }}>250+ bags</div>
-                <div
-                  style={{
-                    fontFamily: "var(--font-head)",
-                    fontSize: 16,
-                    color: "#444",
-                  }}
-                >
-                  Contact us
-                </div>
-              </div>
+              <p style={{ fontSize: 13.5, color: "#888", marginTop: 8 }}>
+                Volume pricing — your rate is shown once your account is approved
+              </p>
             </div>
 
             <ul
               className="tier__feats"
-              style={{
-                marginTop: "auto",
-                paddingTop: 18,
-                marginBottom: 8,
-              }}
+              style={{ marginTop: "auto", paddingTop: 22, marginBottom: 8 }}
             >
               <li className="tier__feat">
                 <TierFeatCheck /> Your logo and label included
@@ -264,9 +123,18 @@ export default function PricingSection() {
         </div>
 
         <div style={{ margin: "40px auto 0", textAlign: "center" }}>
-          <Link href="/contact" className="btn btn--primary">
-            Get Pricing
-          </Link>
+          <a href={SIGNUP_URL} className="btn btn--primary">
+            Apply for Wholesale Access
+          </a>
+          <p style={{ color: "#888", fontSize: 13.5, marginTop: 16 }}>
+            Larger orders or green beans? Request a quote:{" "}
+            <a
+              href="mailto:quote@damata.coffee"
+              style={{ color: "var(--accent)" }}
+            >
+              quote@damata.coffee
+            </a>
+          </p>
         </div>
       </div>
     </section>

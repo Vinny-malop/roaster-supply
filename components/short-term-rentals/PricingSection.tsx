@@ -1,3 +1,6 @@
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
+
 export default function PricingSection() {
   return (
     <section className="section" id="pricing">
@@ -18,7 +21,7 @@ export default function PricingSection() {
         >
           <div
             style={{
-              border: "1.5px solid rgba(17,17,17,0.1)",
+              border: "1.5px solid rgba(42,37,32,0.1)",
               borderRadius: "var(--radius-lg)",
               padding: "48px 40px",
             }}
@@ -58,7 +61,7 @@ export default function PricingSection() {
             </p>
             <div
               style={{
-                borderTop: "1px solid rgba(17,17,17,0.07)",
+                borderTop: "1px solid rgba(42,37,32,0.07)",
                 paddingTop: 24,
                 marginBottom: 28,
               }}
@@ -75,7 +78,7 @@ export default function PricingSection() {
               </p>
             </div>
             <a
-              href="#contact"
+              href={SIGNUP_URL}
               className="btn btn--primary btn--full"
               style={{ padding: "14px 30px", marginBottom: 12 }}
             >
@@ -86,7 +89,7 @@ export default function PricingSection() {
               className="btn btn--ghost btn--full"
               style={{ padding: "12px 30px", marginBottom: 16 }}
             >
-              Request a free sample
+              Talk to us first
             </a>
           </div>
         </div>

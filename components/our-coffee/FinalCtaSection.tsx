@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const SIGNUP_URL =
+  "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
+
 export default function FinalCtaSection() {
   return (
     <section className="section section--cream" id="cta">
@@ -9,7 +12,7 @@ export default function FinalCtaSection() {
           <h2>Ready to put this coffee to work?</h2>
           <p
             style={{
-              color: "rgba(17,17,17,0.58)",
+              color: "rgba(42,37,32,0.58)",
               fontSize: "clamp(15px,1.7vw,17.5px)",
               lineHeight: 1.72,
               fontWeight: 300,
@@ -27,13 +30,13 @@ export default function FinalCtaSection() {
               flexWrap: "wrap",
             }}
           >
-            <Link
-              href="/contact"
+            <a
+              href={SIGNUP_URL}
               className="btn btn--primary"
               style={{ fontSize: 15, padding: "15px 36px" }}
             >
-              Get Pricing
-            </Link>
+              Apply for Wholesale Access
+            </a>
             <Link
               href="/coffee-trucks"
               className="btn btn--ghost"

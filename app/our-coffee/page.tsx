@@ -6,7 +6,7 @@ import WhyItMattersSection from "@/components/our-coffee/WhyItMattersSection";
 import FinalCtaSection from "@/components/our-coffee/FinalCtaSection";
 
 export const metadata: Metadata = {
-  title: "Our Coffee — Roaster Supply Co.",
+  title: "Our Coffee — Damata Coffee Wholesale",
   description:
     "Single-origin Brazilian specialty coffee. 100% Arabica, SCA 82+, roasted to order and shipped fresh. Sourced from Minas Gerais and Espírito Santo.",
 };

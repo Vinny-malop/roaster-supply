@@ -26,9 +26,9 @@ export default function ProductsSection() {
                   <span className="bag__weight">5lb</span>
                   <span className="bag__sub">Specialty Grade</span>
                   <span className="bag__brand">
-                    Roaster
+                    Damata
                     <br />
-                    Supply Co.
+                    Coffee
                   </span>
                 </div>
               </div>
@@ -69,13 +69,13 @@ export default function ProductsSection() {
                   <span className="bag__weight">12oz</span>
                   <span
                     className="bag__sub"
-                    style={{ color: "rgba(17,17,17,0.42)" }}
+                    style={{ color: "rgba(42,37,32,0.42)" }}
                   >
                     Your Brand
                   </span>
                   <span
                     className="bag__brand"
-                    style={{ color: "rgba(17,17,17,0.65)" }}
+                    style={{ color: "rgba(42,37,32,0.65)" }}
                   >
                     YOUR TRUCK
                     <br />
