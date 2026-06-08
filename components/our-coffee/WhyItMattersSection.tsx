@@ -13,7 +13,7 @@ export default function WhyItMattersSection() {
           </p>
         </div>
 
-        <div className="why-grid" style={{ marginTop: 56 }}>
+        <div className="why-grid why-grid--3" style={{ marginTop: 56 }}>
           <div className="why-card why-card--dark anim">
             <div className="why-card__icon">
               <svg viewBox="0 0 24 24">
