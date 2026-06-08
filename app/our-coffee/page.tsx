@@ -20,10 +20,15 @@ export default function OurCoffeePage() {
         title="From the Farm. Roasted Fresh. Shipped Fast."
         sub="Single-origin Brazilian specialty coffee, roasted to order and air freighted to your door."
       />
-      <TheCoffeeSection />
       <ImageBand
         src="/farm-1.jpg"
         alt="Damata's coffee plantation in the mountains of Brazil"
+      />
+      <TheCoffeeSection />
+      <ImageBand
+        src="/farm-4.jpg"
+        alt="Freshly harvested coffee cherries piled in a trailer at the farm"
+        variant="portrait"
       />
       <RoastedToOrderSection />
       <ImageBand
@@ -32,6 +37,20 @@ export default function OurCoffeePage() {
         variant="portrait"
       />
       <WhyItMattersSection />
+      <ImageBand
+        src="/farm-5.jpg"
+        alt="Coffee cherries drying under a poly-tunnel on the farm"
+        variant="portrait"
+      />
+      <section className="section section--cream">
+        <div className="wrap" style={{ maxWidth: 780, textAlign: "center" }}>
+          <p className="pull-quote">
+            Grown by small family farms in the Brazilian highlands — harvested,
+            naturally dried, then roasted to order and shipped to you at peak
+            freshness.
+          </p>
+        </div>
+      </section>
       <ImageBand
         src="/farm-3.jpg"
         alt="A Damata Coffee bag resting on a tray of freshly roasted beans"
