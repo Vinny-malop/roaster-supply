@@ -935,3 +935,16 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
   opacity: 1;
   transform: none;
 }
+
+/* Safety nets: never let .anim content stay invisible.
+   Printing/PDF doesn't fire the scroll observer; reduced-motion and
+   no-JS users shouldn't depend on it either. */
+@media print {
+  .anim { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim { opacity: 1; transform: none; transition: none; }
+}
+@media (scripting: none) {
+  .anim { opacity: 1; transform: none; }
+}
