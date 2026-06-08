@@ -34,6 +34,10 @@ export default function ProductsSection() {
             <div className="p-card__body">
               <span className="p-card__tag">For Daily Operations</span>
               <h3 className="p-card__title">5lb Specialty Bags</h3>
+              <div className="p-card__price">
+                <span className="p-card__price-amt">From $65</span>
+                <span className="p-card__price-unit">/ bag · at volume</span>
+              </div>
               <p className="p-card__desc">
                 Consistent Brazilian coffee for high-volume service — roasted
                 for reliability, easy to dial in, and priced for operators.
@@ -73,11 +77,20 @@ export default function ProductsSection() {
             </div>
             <div className="p-card__body">
               <span className="p-card__tag">For Retail Sales</span>
-              <h3 className="p-card__title">12oz Private Label Bags</h3>
+              <h3 className="p-card__title">12oz &amp; 8oz Private Label Bags</h3>
+              <div className="p-card__price">
+                <span className="p-card__price-amt">From $7</span>
+                <span className="p-card__price-unit">/ bag · 8oz, at volume</span>
+              </div>
               <p className="p-card__desc">
                 Turn your best cup into a take-home product with your
                 truck&apos;s logo — add revenue and build loyalty.
               </p>
+              <div className="p-card__callout">
+                <strong>Yes — your truck can have its own label.</strong> Low
+                minimum order, so you can start small and scale when
+                you&apos;re ready.
+              </div>
               <ul className="p-card__list">
                 <li className="p-card__item">
                   <CheckIcon />

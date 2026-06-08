@@ -48,7 +48,8 @@ export default function WhyBrazilianSection() {
             </div>
             <h3 className="why-card__title">Direct from Origin</h3>
             <p className="why-card__text">
-              Sourced with close relationships and fewer middle layers.
+              Sourced through close relationships with small farms — and no
+              middle layers.
             </p>
           </div>
 

@@ -29,8 +29,8 @@ export default function HowItWorksSection() {
             <div className="step__num">3</div>
             <h3 className="step__title">Receive and serve</h3>
             <p className="step__text">
-              Your coffee arrives ready to use — with optional recurring
-              delivery.
+              Buy in volume to unlock lower per-bag pricing, then receive weekly
+              deliveries so your coffee&apos;s always fresh.
             </p>
           </div>
         </div>

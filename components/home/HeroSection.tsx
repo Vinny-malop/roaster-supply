@@ -6,8 +6,13 @@ export default function HeroSection() {
     <section className="hero" id="home">
       <div className="hero__bg">
         <div className="hero__video-wrap">
-          {/* ▼ SWAP with <video autoplay muted loop playsinline src="video.mp4"></video> */}
-          <div className="hero__placeholder"></div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-bg.jpg"
+            alt=""
+            aria-hidden="true"
+            className="hero__bg-img"
+          />
         </div>
         <div className="hero__overlay"></div>
         {/* eslint-disable-next-line @next/next/no-img-element */}

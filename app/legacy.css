@@ -273,6 +273,12 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
   inset: 0;
   overflow: hidden;
 }
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .hero__placeholder {
   width: 100%;
   height: 100%;
@@ -290,7 +296,7 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(42,37,32,0.70);
+  background: rgba(42,37,32,0.60);
   z-index: 1;
 }
 .hero__branch {
@@ -566,6 +572,32 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
 .p-card__tag { display: block; font-size: 10px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 9px; }
 .p-card__title { font-family: var(--font-head); font-size: 22px; font-weight: 600; margin-bottom: 12px; }
 .p-card__desc { font-size: 14.5px; color: #575757; line-height: 1.68; margin-bottom: 22px; }
+.p-card__callout {
+  background: var(--accent-faint);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #4a4036;
+  margin: -4px 0 22px;
+}
+.p-card__callout strong { color: var(--accent); font-weight: 600; }
+.p-card__price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 2px 0 14px;
+}
+.p-card__price-amt {
+  font-family: var(--font-head);
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1;
+}
+.p-card__price-unit { font-size: 13px; color: #888; }
 .p-card__list { display: flex; flex-direction: column; gap: 9px; }
 .p-card__item { display: flex; align-items: center; gap: 10px; font-size: 13.5px; color: #444; }
 .check-icon {
