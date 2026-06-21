@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 
 const SIGNUP_URL =
   "https://shop.wholesale.damata.coffee/pages/wholesale-signup";
+const LOGIN_URL = "https://shop.wholesale.damata.coffee/account";
 
 export default function Header() {
   const pathname = usePathname();
@@ -82,12 +83,14 @@ export default function Header() {
               </li>
               {/* <li><Link href="/client-portal">Client Portal</Link></li> */}
             </ul>
-            <a
-              href={SIGNUP_URL}
-              className="btn btn--ghost nav__cta-desktop"
-            >
-              Apply for Access
-            </a>
+            <div className="nav__cta-desktop nav__cta-group">
+              <a href={LOGIN_URL} className="btn btn--cream-ghost">
+                Login
+              </a>
+              <a href={SIGNUP_URL} className="btn btn--cream">
+                Apply for Access
+              </a>
+            </div>
             <button
               className="nav__burger"
               id="burger"
@@ -126,7 +129,10 @@ export default function Header() {
         <Link href="/contact" className="m-link" onClick={closeMenu}>
           Contact
         </Link>
-        <a href={SIGNUP_URL} className="btn btn--ghost" onClick={closeMenu}>
+        <a href={LOGIN_URL} className="btn btn--cream-ghost" onClick={closeMenu}>
+          Login
+        </a>
+        <a href={SIGNUP_URL} className="btn btn--cream" onClick={closeMenu}>
           Apply for Access
         </a>
       </div>

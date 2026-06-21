@@ -134,6 +134,30 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
   transform: translateY(-1px);
 }
 .btn--full { width: 100%; }
+/* Solid cream (logo color) — stands out on the hero photo + dark scrolled nav */
+.btn--cream {
+  background: var(--cream);
+  color: var(--black);
+  border: 1.5px solid var(--cream);
+}
+.btn--cream:hover {
+  background: #fff;
+  border-color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(42,37,32,0.22);
+}
+/* Cream outline — secondary (Login) */
+.btn--cream-ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 1.5px solid rgba(242,237,227,0.55);
+}
+.btn--cream-ghost:hover {
+  background: rgba(242,237,227,0.12);
+  border-color: var(--cream);
+  color: var(--cream);
+  transform: translateY(-1px);
+}
 
 /* ==========================================
    LOGO
@@ -246,6 +270,12 @@ h3 { font-size: clamp(19px, 2.2vw, 26px); }
   transition: color var(--ease);
 }
 .nav__mobile-overlay a:hover { color: var(--accent); }
+/* Login + Apply group in the header (display is controlled by nav__cta-desktop) */
+.nav__cta-group { align-items: center; gap: 12px; }
+/* Keep the header buttons looking like buttons inside the dark mobile overlay */
+.nav__mobile-overlay .btn { font-family: var(--font-body); font-size: 14px; }
+.nav__mobile-overlay .btn--cream { color: var(--black); }
+.nav__mobile-overlay .btn--cream-ghost { color: var(--cream); }
 
 @media (min-width: 900px) {
   .nav__links { display: flex; }
